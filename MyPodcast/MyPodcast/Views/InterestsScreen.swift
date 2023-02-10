@@ -12,7 +12,6 @@ struct InterestsScreen: View {
 
     var body: some View {
         NavigationView {
-            
             VStack {
                 Text("INTERESTS")
                 Spacer()
@@ -25,7 +24,7 @@ struct InterestsScreen: View {
                     .cornerRadius(1)
                 }
                 Spacer()
-                NavigationLink(destination: MainScreen()) {
+                NavigationLink(destination: AuthenticationScreen()) {
                     Text("CONTINUE")
                 }
                 

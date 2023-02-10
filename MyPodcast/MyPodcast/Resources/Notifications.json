@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "New podcast",
+        "isRead": true
+    },
+    {
+        "id": 2,
+        "title": "Continue listening",
+        "isRead": true
+    },
+    {
+        "id": 3,
+        "title": "New podcast",
+        "isRead": false
+    },
+    {
+        "id": 4,
+        "title": "New follower",
+        "isRead": true
+    },
+    {
+        "id": 5,
+        "title": "Black Friday Deals",
+        "isRead": false
+    }
+]
