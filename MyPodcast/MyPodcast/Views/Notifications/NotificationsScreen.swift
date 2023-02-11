@@ -12,16 +12,18 @@ struct NotificationsScreen: View {
 
     var body: some View {
         NavigationView {
-//            Text("Notifications Screen")
             List {
                 ForEach(modelData.notifications) { notification in
                     NavigationLink {
-                        MyListScreen()
+                        if let podcast = notification.podcast {
+                            PodcastDetailsScreen(podcast: podcast)
+                        }
                     } label: {
                         NotificationRow(notification: notification)
                     }
                 }
             }
+            .navigationTitle("Notifications")
         }
     }
 }

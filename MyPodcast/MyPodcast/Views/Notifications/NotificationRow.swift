@@ -9,10 +9,10 @@ import SwiftUI
 
 struct NotificationRow: View {
     var notification: Notification
+    
     var body: some View {
         HStack {
             Text(notification.title)
-            
             
             if !notification.isRead {
                 Spacer()
@@ -25,8 +25,9 @@ struct NotificationRow: View {
 
 struct NotificationRow_Previews: PreviewProvider {
     static var notifications = ModelData().notifications
+    
     static var previews: some View {
-        Group{
+        Group {
             NotificationRow(notification: notifications[0])
             NotificationRow(notification: notifications[1])
             NotificationRow(notification: notifications[2])

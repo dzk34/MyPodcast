@@ -9,6 +9,7 @@ import Foundation
 
 final class ModelData: ObservableObject {
     @Published var notifications: [Notification] = load("Notifications.json")
+    @Published var podcasts: [Podcast] = load("Podcasts.json")
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

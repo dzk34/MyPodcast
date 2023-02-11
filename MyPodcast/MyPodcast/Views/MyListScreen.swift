@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MyListScreen: View {
     var body: some View {
-        Text("My List Screen")
+//                Text("My List Screen")
+        PodcastListView()
+            .environmentObject(ModelData())
     }
 }
 
