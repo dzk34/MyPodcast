@@ -20,6 +20,7 @@ struct PodcastListView: View {
                 }
             }
         }
+        .listStyle(.plain)
     }
 }
 

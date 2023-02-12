@@ -24,6 +24,7 @@ struct NotificationsScreen: View {
                 }
             }
             .navigationTitle("Notifications")
+            .listStyle(.plain)
         }
     }
 }

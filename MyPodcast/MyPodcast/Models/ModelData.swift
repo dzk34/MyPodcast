@@ -10,6 +10,17 @@ import Foundation
 final class ModelData: ObservableObject {
     @Published var notifications: [Notification] = load("Notifications.json")
     @Published var podcasts: [Podcast] = load("Podcasts.json")
+    
+    var categories: [String: [Podcast]] {
+        Dictionary(
+            grouping: podcasts,
+            by: { $0.category.rawValue }
+        )
+    }
+
+    var featured: Podcast? {
+        podcasts.randomElement()
+    }
 }
 
 func load<T: Decodable>(_ filename: String) -> T {

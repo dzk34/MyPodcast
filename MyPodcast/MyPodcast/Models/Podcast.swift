@@ -15,9 +15,10 @@ struct Podcast: Hashable, Codable, Identifiable {
     var date: String
     var url: String
     
-//    static var sampleData: [ToDo] {
-//        [
-//            Podcast(id: 1, title: "Podcast title 1", description: <#T##String#>, image: <#T##String#>, date: <#T##Date#>, url: <#T##String#>)
-//        ]
-//    }
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case news = "News"
+        case sport = "Sport"
+        case business = "Business"
+    }
 }
