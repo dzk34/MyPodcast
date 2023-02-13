@@ -31,9 +31,9 @@ struct MainScreen: View {
                 }
                 .tag(Tab.explore)
 
-            MyListScreen()
+            ProfileScreen()
                 .tabItem {
-                    Label("My List", systemImage: "list.star")
+                    Label("My Profile", systemImage: "person.crop.circle")
                 }
                 .tag(Tab.mylist)
 
