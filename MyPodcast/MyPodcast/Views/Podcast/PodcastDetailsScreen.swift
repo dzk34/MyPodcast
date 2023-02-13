@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PodcastDetailsScreen: View {
+    @State var progressValue: Float = 0.0
     var podcast: Podcast
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-//            NavigationView {
                 VStack(alignment: .leading) {
                     Image(podcast.image)
                         .resizable()
@@ -23,21 +23,28 @@ struct PodcastDetailsScreen: View {
                     Text(podcast.date)
                         .foregroundColor(.gray)
                     Spacer()
-                    Text("\(podcast.description)")
-                    Spacer()
+
                     HStack() {
-                        Text("duration")
-                        Button {} label: {
+                        ProgressView(value: $progressValue).frame(height: 16)
+                        Button {
+                            startProgressBar()
+                        } label: {
                             Image(systemName: "play.circle")
                                 .foregroundColor(.black)
                         }
                     }
-//                    PodcastListView()
-//                        .environmentObject(ModelData())
-//                    Text("duration2")
+                    Spacer()
+                    Text("\(podcast.description)")
+                    Spacer()
                 }
                 .padding()
-//            }
+        }
+    }
+    
+    func startProgressBar() {
+        progressValue = 0.0
+        for _ in 0...80 {
+            progressValue += 0.015
         }
     }
 }

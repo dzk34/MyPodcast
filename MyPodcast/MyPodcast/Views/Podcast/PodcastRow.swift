@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PodcastRow: View {
+    @State var progressValue: Float = 0.4
     var podcast: Podcast
 
     var body: some View {
@@ -25,6 +26,16 @@ struct PodcastRow: View {
             Image(systemName: "play.circle.fill")
                 .foregroundColor(.blue)
         }
+    }
+    
+    func startProgressBar() {
+        for _ in 0...80 {
+            self.progressValue += 0.015
+        }
+    }
+    
+    func resetProgressBar() {
+        self.progressValue = 0.0
     }
 }
 
