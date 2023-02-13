@@ -23,12 +23,13 @@ struct HomeScreen: View {
                 }
                 
                 ForEach(modelData.categories.keys.sorted(), id:\.self) { key in
+                    Spacer()
                     CategoryRow(categoryName: key, items: modelData.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
             }
             .listStyle(.plain)
-
         }
     }
 }

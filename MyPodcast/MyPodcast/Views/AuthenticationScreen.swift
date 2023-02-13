@@ -12,14 +12,29 @@ struct AuthenticationScreen: View {
         NavigationView {
             VStack {
                 Spacer()
+                Image("logo")
+                    .resizable(resizingMode: .stretch)
+                    .scaledToFit()
+                    .cornerRadius(48)
+
+                Spacer()
                 NavigationLink(destination: MainScreen()) {
                     Text("LOGIN")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .cornerRadius(20)
                 }
 
                 NavigationLink(destination: MainScreen()) {
                     Text("SIGNUP")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .cornerRadius(20)
                 }
             }
+            .padding()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

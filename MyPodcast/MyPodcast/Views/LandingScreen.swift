@@ -21,6 +21,10 @@ struct LandingScreen: View {
                 Spacer()
                 NavigationLink(destination: InterestsScreen()) {
                     Text("START")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(.blue)
+                        .cornerRadius(20)
                 }
             }
             .padding()
