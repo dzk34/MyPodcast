@@ -13,6 +13,8 @@ struct ExploreScreen: View {
     }
 }
 
-#Preview {
-    ExploreScreen()
+struct ExploreScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ExploreScreen()
+    }
 }

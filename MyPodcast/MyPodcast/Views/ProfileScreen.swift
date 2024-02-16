@@ -13,6 +13,8 @@ struct ProfileScreen: View {
     }
 }
 
-#Preview {
-    ProfileScreen()
+struct ProfileScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ProfileScreen()
+    }
 }

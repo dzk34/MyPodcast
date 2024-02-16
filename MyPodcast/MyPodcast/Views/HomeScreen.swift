@@ -8,11 +8,35 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @EnvironmentObject var modelData: ModelData
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List {
+                if let featuredPodcast = modelData.featured {
+                    Image(featuredPodcast.image)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 200)
+                        .clipped()
+                        .listRowInsets(EdgeInsets())
+                }
+                
+                ForEach(modelData.categories.keys.sorted(), id:\.self) { key in
+                    Spacer()
+                    CategoryRow(categoryName: key, items: modelData.categories[key]!)
+                }
+                .listRowInsets(EdgeInsets())
+                .listRowSeparator(.hidden)
+            }
+            .listStyle(.plain)
+        }
     }
 }
 
-#Preview {
-    HomeScreen()
+struct HomeScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeScreen()
+            .environmentObject(ModelData())
+    }
 }
