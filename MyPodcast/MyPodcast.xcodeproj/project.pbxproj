@@ -14,6 +14,11 @@
 		BCCB400B2B7FDB70001899B8 /* MyPodcastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB400A2B7FDB70001899B8 /* MyPodcastTests.swift */; };
 		BCCB40152B7FDB70001899B8 /* MyPodcastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40142B7FDB70001899B8 /* MyPodcastUITests.swift */; };
 		BCCB40172B7FDB70001899B8 /* MyPodcastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40162B7FDB70001899B8 /* MyPodcastUITestsLaunchTests.swift */; };
+		BCCB40242B7FDC47001899B8 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40232B7FDC47001899B8 /* MainScreen.swift */; };
+		BCCB40272B7FDCB4001899B8 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */; };
+		BCCB40292B7FDCCA001899B8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */; };
+		BCCB402B2B7FDCDD001899B8 /* NotificationsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB402A2B7FDCDD001899B8 /* NotificationsScreen.swift */; };
+		BCCB402D2B7FDCF0001899B8 /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		BCCB40102B7FDB70001899B8 /* MyPodcastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPodcastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCB40142B7FDB70001899B8 /* MyPodcastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastUITests.swift; sourceTree = "<group>"; };
 		BCCB40162B7FDB70001899B8 /* MyPodcastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BCCB40232B7FDC47001899B8 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		BCCB402A2B7FDCDD001899B8 /* NotificationsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsScreen.swift; sourceTree = "<group>"; };
+		BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +104,12 @@
 		BCCB3FF82B7FDB6D001899B8 /* MyPodcast */ = {
 			isa = PBXGroup;
 			children = (
+				BCCB40252B7FDC8F001899B8 /* Views */,
 				BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */,
 				BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */,
 				BCCB3FFD2B7FDB6F001899B8 /* Assets.xcassets */,
 				BCCB3FFF2B7FDB6F001899B8 /* Preview Content */,
+				BCCB40232B7FDC47001899B8 /* MainScreen.swift */,
 			);
 			path = MyPodcast;
 			sourceTree = "<group>";
@@ -125,6 +137,17 @@
 				BCCB40162B7FDB70001899B8 /* MyPodcastUITestsLaunchTests.swift */,
 			);
 			path = MyPodcastUITests;
+			sourceTree = "<group>";
+		};
+		BCCB40252B7FDC8F001899B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */,
+				BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */,
+				BCCB402A2B7FDCDD001899B8 /* NotificationsScreen.swift */,
+				BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCB402B2B7FDCDD001899B8 /* NotificationsScreen.swift in Sources */,
+				BCCB402D2B7FDCF0001899B8 /* ExploreScreen.swift in Sources */,
+				BCCB40242B7FDC47001899B8 /* MainScreen.swift in Sources */,
+				BCCB40292B7FDCCA001899B8 /* HomeScreen.swift in Sources */,
 				BCCB3FFC2B7FDB6D001899B8 /* ContentView.swift in Sources */,
 				BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */,
+				BCCB40272B7FDCB4001899B8 /* ProfileScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
