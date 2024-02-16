@@ -22,7 +22,7 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(items) { podcast in
                         NavigationLink {
-//                            PodcastDetailsScreen(podcast: podcast)
+                            PodcastDetailsScreen(podcast: podcast)
                         } label: {
                             PodcastItem(podcast: podcast)
                         }

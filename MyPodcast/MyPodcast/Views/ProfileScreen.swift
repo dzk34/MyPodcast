@@ -9,11 +9,12 @@ import SwiftUI
 
 struct ProfileScreen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        PodcastListView()
+            .environmentObject(ModelData())
     }
 }
 
-struct ProfileScreen_Previews: PreviewProvider {
+struct MyListScreen_Previews: PreviewProvider {
     static var previews: some View {
         ProfileScreen()
     }

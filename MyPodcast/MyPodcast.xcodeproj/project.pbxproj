@@ -29,6 +29,12 @@
 		BCCB403F2B7FE156001899B8 /* AuthenticationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB403E2B7FE156001899B8 /* AuthenticationScreen.swift */; };
 		BCCB40422B7FE9C7001899B8 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40412B7FE9C7001899B8 /* CategoryRow.swift */; };
 		BCCB40452B7FEA43001899B8 /* PodcastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40442B7FEA43001899B8 /* PodcastItem.swift */; };
+		BCCB40472B8013E7001899B8 /* PodcastDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40462B8013E7001899B8 /* PodcastDetailsScreen.swift */; };
+		BCCB404A2B801543001899B8 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40492B801543001899B8 /* ExploreItem.swift */; };
+		BCCB404D2B801CA1001899B8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB404C2B801CA1001899B8 /* ProgressView.swift */; };
+		BCCB404F2B801EC5001899B8 /* PodcastListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB404E2B801EC5001899B8 /* PodcastListView.swift */; };
+		BCCB40512B801EDC001899B8 /* PodcastRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40502B801EDC001899B8 /* PodcastRow.swift */; };
+		BCCB40542B801F1C001899B8 /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40532B801F1C001899B8 /* NotificationRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +80,12 @@
 		BCCB403E2B7FE156001899B8 /* AuthenticationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationScreen.swift; sourceTree = "<group>"; };
 		BCCB40412B7FE9C7001899B8 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		BCCB40442B7FEA43001899B8 /* PodcastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastItem.swift; sourceTree = "<group>"; };
+		BCCB40462B8013E7001899B8 /* PodcastDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastDetailsScreen.swift; sourceTree = "<group>"; };
+		BCCB40492B801543001899B8 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
+		BCCB404C2B801CA1001899B8 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		BCCB404E2B801EC5001899B8 /* PodcastListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListView.swift; sourceTree = "<group>"; };
+		BCCB40502B801EDC001899B8 /* PodcastRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRow.swift; sourceTree = "<group>"; };
+		BCCB40532B801F1C001899B8 /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,14 +176,13 @@
 		BCCB40252B7FDC8F001899B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCB40522B801F0F001899B8 /* Notifications */,
+				BCCB404B2B801C98001899B8 /* Player */,
+				BCCB40482B801536001899B8 /* Explore */,
 				BCCB40432B7FEA34001899B8 /* Podcast */,
 				BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */,
 				BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */,
-				BCCB402A2B7FDCDD001899B8 /* NotificationsScreen.swift */,
-				BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */,
-				BCCB403A2B7FE115001899B8 /* LandingScreen.swift */,
-				BCCB403C2B7FE135001899B8 /* InterestsScreen.swift */,
-				BCCB403E2B7FE156001899B8 /* AuthenticationScreen.swift */,
+				BCCB40552B801F45001899B8 /* Onboarding */,
 				BCCB40412B7FE9C7001899B8 /* CategoryRow.swift */,
 			);
 			path = Views;
@@ -200,8 +211,47 @@
 			isa = PBXGroup;
 			children = (
 				BCCB40442B7FEA43001899B8 /* PodcastItem.swift */,
+				BCCB40462B8013E7001899B8 /* PodcastDetailsScreen.swift */,
+				BCCB404E2B801EC5001899B8 /* PodcastListView.swift */,
+				BCCB40502B801EDC001899B8 /* PodcastRow.swift */,
 			);
 			path = Podcast;
+			sourceTree = "<group>";
+		};
+		BCCB40482B801536001899B8 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB40492B801543001899B8 /* ExploreItem.swift */,
+				BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		BCCB404B2B801C98001899B8 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB404C2B801CA1001899B8 /* ProgressView.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		BCCB40522B801F0F001899B8 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB402A2B7FDCDD001899B8 /* NotificationsScreen.swift */,
+				BCCB40532B801F1C001899B8 /* NotificationRow.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		BCCB40552B801F45001899B8 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB403A2B7FE115001899B8 /* LandingScreen.swift */,
+				BCCB403C2B7FE135001899B8 /* InterestsScreen.swift */,
+				BCCB403E2B7FE156001899B8 /* AuthenticationScreen.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,12 +395,18 @@
 				BCCB40322B7FDF05001899B8 /* Notification.swift in Sources */,
 				BCCB40452B7FEA43001899B8 /* PodcastItem.swift in Sources */,
 				BCCB40242B7FDC47001899B8 /* MainScreen.swift in Sources */,
+				BCCB404A2B801543001899B8 /* ExploreItem.swift in Sources */,
+				BCCB40472B8013E7001899B8 /* PodcastDetailsScreen.swift in Sources */,
 				BCCB40342B7FDF2C001899B8 /* Podcast.swift in Sources */,
+				BCCB40542B801F1C001899B8 /* NotificationRow.swift in Sources */,
 				BCCB40292B7FDCCA001899B8 /* HomeScreen.swift in Sources */,
+				BCCB40512B801EDC001899B8 /* PodcastRow.swift in Sources */,
 				BCCB3FFC2B7FDB6D001899B8 /* ContentView.swift in Sources */,
+				BCCB404F2B801EC5001899B8 /* PodcastListView.swift in Sources */,
 				BCCB40302B7FDED4001899B8 /* ModelData.swift in Sources */,
 				BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */,
 				BCCB40272B7FDCB4001899B8 /* ProfileScreen.swift in Sources */,
+				BCCB404D2B801CA1001899B8 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

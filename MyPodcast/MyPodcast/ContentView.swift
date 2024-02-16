@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var progressValue: Float = 0.4
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+            ProgressView(value: $progressValue).frame(height: 20)
+            Spacer()
+        }.padding()
+    }}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
