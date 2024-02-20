@@ -19,7 +19,7 @@ struct MainScreen: View {
 
     var body: some View {
         TabView {
-            ExploreScreen(viewModel: ExploreScreenViewModel(exploreFetcher: ExploreScreenService(requestManager: RequestManager())))
+            ExploreScreen(viewModel: ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenService(requestManager: RequestManager())))
                 .tabItem {
                     Label("Explore", systemImage: "signpost.right.and.left")
                 }

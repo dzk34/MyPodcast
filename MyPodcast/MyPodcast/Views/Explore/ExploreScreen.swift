@@ -51,6 +51,6 @@ struct ExploreScreen: View {
 struct ExploreScreen_Previews: PreviewProvider {
     static var previews: some View {
         ExploreScreen(
-            viewModel: ExploreScreenViewModel(exploreFetcher: ExploreScreenService(requestManager: RequestManager())))
+            viewModel: ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenService(requestManager: RequestManager())))
     }
 }

@@ -15,7 +15,7 @@ struct ExploreScreenService {
   }
 }
 
-extension ExploreScreenService: ExploreFetcher {
+extension ExploreScreenService: ExploreScreenFetcher {
     func fetchPodcasts() async -> [Podcast] {
         let requestData = PodcastRequest.bestPodcasts
         
