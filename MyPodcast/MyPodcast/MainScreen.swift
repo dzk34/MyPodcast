@@ -11,25 +11,25 @@ struct MainScreen: View {
     @State private var selection: Tab = .home
     
     enum Tab {
-        case home
         case explore
+        case home
         case mylist
         case notifications
     }
 
     var body: some View {
         TabView {
-            HomeScreen()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-                .tag(Tab.home)
-            
-            ExploreScreen()
+            ExploreScreen(viewModel: ExploreScreenViewModel())
                 .tabItem {
                     Label("Explore", systemImage: "signpost.right.and.left")
                 }
                 .tag(Tab.explore)
+
+            HomeScreen()
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+                .tag(Tab.home)            
 
             NotificationsScreen()
                 .tabItem {

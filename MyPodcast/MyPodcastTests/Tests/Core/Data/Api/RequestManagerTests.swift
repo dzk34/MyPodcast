@@ -18,7 +18,7 @@ class RequestManagerTests: XCTestCase {
         requestManager = RequestManager(apiManager: APIManagerMock())
     }
     
-    func testRequestPodcasts() async throws {
+    func testPerformingRequests() async throws {
         guard let podcastList: PodcastList = try await requestManager?.perform(PodcastsRequestMock.getPodcasts) else {
             XCTFail("Didn't get data from the request manager")
             return

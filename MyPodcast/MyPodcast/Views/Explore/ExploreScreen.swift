@@ -8,12 +8,9 @@
 import SwiftUI
 
 struct ExploreScreen: View {
-    @EnvironmentObject var modelData: MockData
     @State private var searchText = ""
-    private let requestManager = RequestManager()
-    @State private var podcastsList: [Podcast] = []
-    @State var isLoading = true
-
+    @ObservedObject var viewModel: ExploreScreenViewModel
+    
     var body: some View {
         NavigationView {
             List {
@@ -24,7 +21,7 @@ struct ExploreScreen: View {
                     .cornerRadius(8)
                     .padding(.horizontal, 10)
                 
-                ForEach(podcastsList) { podcast in
+                ForEach(viewModel.podcasts) { podcast in
                     Spacer()
                     NavigationLink {
                         PodcastDetailsScreen(podcast: podcast)
@@ -37,32 +34,21 @@ struct ExploreScreen: View {
                 }
             }
             .task {
-                await fetchPodcasts()
+                await viewModel.fetchPodcasts()
             }
             .listStyle(.plain)
             .navigationTitle("Explore")
+//            .overlay {
+//              if viewModel.isLoading {
+//                ProgressView("Finding Animals near you...")
+//              }
+//            }
         }
-    }
-    
-    func fetchPodcasts() async {
-        do {
-            let podcastsList2: PodcastList = try await requestManager.perform(PodcastRequest.bestPodcasts)
-            
-            self.podcastsList = podcastsList2.podcasts
-
-            await stopLoading()
-        } catch {}
-    }
-    
-    @MainActor
-    func stopLoading() async {
-      isLoading = false
     }
 }
 
 struct ExploreScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreScreen()
-            .environmentObject(MockData())
+        ExploreScreen(viewModel: ExploreScreenViewModel())
     }
 }
