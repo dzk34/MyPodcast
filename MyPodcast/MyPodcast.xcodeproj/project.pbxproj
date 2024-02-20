@@ -16,9 +16,6 @@
 		BC71C9BE2B84A30B00BBD576 /* DataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9BD2B84A30A00BBD576 /* DataParser.swift */; };
 		BC71C9C12B84A53300BBD576 /* PodcastRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9C02B84A53300BBD576 /* PodcastRequest.swift */; };
 		BC71C9C92B84A85500BBD576 /* APIManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9C82B84A85500BBD576 /* APIManagerMock.swift */; };
-		BC71C9CB2B84ADAE00BBD576 /* AccessTokenTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9CA2B84ADAE00BBD576 /* AccessTokenTestHelper.swift */; };
-		BC71C9CD2B84ADD700BBD576 /* AuthTokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9CC2B84ADD700BBD576 /* AuthTokenRequest.swift */; };
-		BC71C9CF2B84B04200BBD576 /* APIToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9CE2B84B04200BBD576 /* APIToken.swift */; };
 		BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */; };
 		BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */; };
 		BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */; };
@@ -77,9 +74,6 @@
 		BC71C9BD2B84A30A00BBD576 /* DataParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataParser.swift; sourceTree = "<group>"; };
 		BC71C9C02B84A53300BBD576 /* PodcastRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRequest.swift; sourceTree = "<group>"; };
 		BC71C9C82B84A85500BBD576 /* APIManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerMock.swift; sourceTree = "<group>"; };
-		BC71C9CA2B84ADAE00BBD576 /* AccessTokenTestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenTestHelper.swift; sourceTree = "<group>"; };
-		BC71C9CC2B84ADD700BBD576 /* AuthTokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenRequest.swift; sourceTree = "<group>"; };
-		BC71C9CE2B84B04200BBD576 /* APIToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIToken.swift; sourceTree = "<group>"; };
 		BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsRequestMock.swift; sourceTree = "<group>"; };
 		BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		BCCB3FF62B7FDB6D001899B8 /* MyPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +184,6 @@
 				BC71C9B42B849F5200BBD576 /* Network */,
 				BC71C9B22B849A2400BBD576 /* RequestProtocol.swift */,
 				BC71C9B72B84A03C00BBD576 /* APIConstants.swift */,
-				BC71C9CE2B84B04200BBD576 /* APIToken.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -210,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				BC71C9C02B84A53300BBD576 /* PodcastRequest.swift */,
-				BC71C9CC2B84ADD700BBD576 /* AuthTokenRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -261,7 +253,6 @@
 		BC71C9C72B84A84400BBD576 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				BC71C9CA2B84ADAE00BBD576 /* AccessTokenTestHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -533,7 +524,6 @@
 				BCCB403D2B7FE135001899B8 /* InterestsScreen.swift in Sources */,
 				BCCB402D2B7FDCF0001899B8 /* ExploreScreen.swift in Sources */,
 				BCCB403B2B7FE116001899B8 /* LandingScreen.swift in Sources */,
-				BC71C9CF2B84B04200BBD576 /* APIToken.swift in Sources */,
 				BCCB40422B7FE9C7001899B8 /* CategoryRow.swift in Sources */,
 				BCCB403F2B7FE156001899B8 /* AuthenticationScreen.swift in Sources */,
 				BCCB40322B7FDF05001899B8 /* Notification.swift in Sources */,
@@ -542,7 +532,6 @@
 				BCCB404A2B801543001899B8 /* ExploreItem.swift in Sources */,
 				BC71C9C12B84A53300BBD576 /* PodcastRequest.swift in Sources */,
 				BCCB40472B8013E7001899B8 /* PodcastDetailsScreen.swift in Sources */,
-				BC71C9CD2B84ADD700BBD576 /* AuthTokenRequest.swift in Sources */,
 				BCCB40542B801F1C001899B8 /* NotificationRow.swift in Sources */,
 				BCCB40292B7FDCCA001899B8 /* HomeScreen.swift in Sources */,
 				BCCB40512B801EDC001899B8 /* PodcastRow.swift in Sources */,
@@ -568,7 +557,6 @@
 			files = (
 				BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */,
 				BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */,
-				BC71C9CB2B84ADAE00BBD576 /* AccessTokenTestHelper.swift in Sources */,
 				BC71C9C92B84A85500BBD576 /* APIManagerMock.swift in Sources */,
 				BCCB400B2B7FDB70001899B8 /* MyPodcastTests.swift in Sources */,
 			);

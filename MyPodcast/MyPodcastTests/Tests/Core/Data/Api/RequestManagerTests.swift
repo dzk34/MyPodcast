@@ -15,13 +15,6 @@ class RequestManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        
-//        guard let userDefaults = UserDefaults(suiteName: #file) else {
-//            return
-//        }
-        
-//        userDefaults.removePersistentDomain(forName: #file)
-        
         requestManager = RequestManager(apiManager: APIManagerMock())
     }
     
@@ -36,8 +29,8 @@ class RequestManagerTests: XCTestCase {
         let firstPodcast = podcasts.first
         let lastPodcast = podcasts.last
         
+        XCTAssertEqual(podcasts.count, 20)
         XCTAssertEqual(firstPodcast?.id, "ee84d7d11875465fb89487675ff5425d")
         XCTAssertEqual(lastPodcast?.id, "40b72ce8610649529542575dedf06c86")
-        XCTAssertEqual(podcasts.count, 20)
     }
 }

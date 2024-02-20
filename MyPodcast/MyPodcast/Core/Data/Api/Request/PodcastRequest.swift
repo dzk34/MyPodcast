@@ -6,48 +6,41 @@
 //
 
 import Foundation
-/*
+
 enum PodcastRequest: RequestProtocol {
-  case getAnimalsWith(page: Int, latitude: Double?, longitude: Double?)
-  case getPodcastBy(id: String, age: String?, type: String?)
-  
-  var path: String {
-    "/v2/animals"
-  }
-  
-  var urlParams: [String: String?] {
-    switch self {
-    case let .getAnimalsWith(page, latitude, longitude):
-      var params = ["page": String(page)]
-      if let latitude = latitude {
-        params["latitude"] = String(latitude)
-      }
+    case fecthPodcast(id: String)
+    case bestPodcasts
+    case searchPodcasts(term: String)
 
-      if let longitude = longitude {
-        params["longitude"] = String(longitude)
-      }
-      params["sort"] = "random"
-      return params
-
-    case let .getAnimalsBy(name, age, type):
-      var params: [String: String] = [:]
-      if !name.isEmpty {
-        params["name"] = name
-      }
-
-      if let age = age {
-        params["age"] = age
-      }
-
-      if let type = type {
-        params["type"] = type
-      }
-      return params
+    var path: String {
+        switch self {
+        case .fecthPodcast(let id):
+            return "/api/v2/podcasts/\(id)"
+        case .bestPodcasts:
+            return "/wp-json/podcasts/all/most-recent"
+        case .searchPodcasts(let term):
+            return "/api/v2/search?q=\(term)"
+        }
     }
-  }
-  
-  var requestType: RequestType {
-    .GET
-  }
+
+    var requestType: RequestType {
+        switch self {
+        case .fecthPodcast, .bestPodcasts, .searchPodcasts:
+            return .get
+        }
+    }
+
+//  var urlParams: [String: String?] {
+//    switch self {
+//    case let .getAnimalsBy(name, age, type):
+//      var params: [String: String] = [:]
+//      if !name.isEmpty {
+//        params["name"] = name
+//      }
+//
+//      return params
+//    }
+//  }
+//  
 }
-*/
+

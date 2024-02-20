@@ -13,7 +13,7 @@ enum PodcastsRequestMock: RequestProtocol {
     case getPodcasts
 
     var requestType: RequestType {
-        return .GET
+        return .get
     }
 
     var path: String {
