@@ -12,9 +12,7 @@ struct PodcastItem: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Image(podcast.image)
-                .renderingMode(.original)
-                .resizable()
+            AsyncImage(url: URL(string: podcast.thumbnail))
                 .frame(width: 155, height: 155)
                 .cornerRadius(16)
 

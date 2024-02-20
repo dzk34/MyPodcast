@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "title": "New podcast",
+        "isRead": true,
+        "podcast_id": "ee84d7d11875465fb89487675ff5425d"
+    },
+    {
+        "id": "10",
+        "title": "Continue listening",
+        "isRead": true,
+        "podcast_id": "99a8f88389c54382a300a363c74e9f26"
+    },
+    {
+        "id": "2",
+        "title": "New podcast",
+        "isRead": false,
+        "podcast_id": "34beae8ad8fd4b299196f413b8270a30"
+    },
+    {
+        "id": "8",
+        "title": "New follower",
+        "isRead": true,
+        "podcast_id": "adbeec8ec43e4957bb63b9f0b7489991"
+    },
+    {
+        "id": "5",
+        "title": "Black Friday Deals",
+        "isRead": false,
+        "podcast_id": "0d362b13399240de97602ef614acdcbc"
+    }
+]

@@ -13,8 +13,7 @@ struct ExploreItem: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text(podcast.title)
-            Image(podcast.image)
-                .resizable()
+            AsyncImage(url: URL(string: podcast.thumbnail))
                 .scaledToFill()
                 .frame(height: 200)
                 .clipped()

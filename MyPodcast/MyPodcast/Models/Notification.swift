@@ -8,10 +8,10 @@
 import Foundation
 
 struct Notification: Hashable, Codable, Identifiable {
-    var id: Int
+    var id: String
     var title: String
     var isRead: Bool
-    var podcast_id: Int
+    var podcast_id: String
     
     var podcast: Podcast? {
         ModelData().podcasts.first(where: { $0.id == podcast_id })

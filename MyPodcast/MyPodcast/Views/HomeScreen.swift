@@ -14,8 +14,7 @@ struct HomeScreen: View {
         NavigationView {
             List {
                 if let featuredPodcast = modelData.featured {
-                    Image(featuredPodcast.image)
-                        .resizable()
+                    AsyncImage(url: URL(string: featuredPodcast.thumbnail))
                         .scaledToFill()
                         .frame(height: 200)
                         .clipped()

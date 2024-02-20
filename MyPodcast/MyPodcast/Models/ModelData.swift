@@ -9,17 +9,22 @@ import Foundation
 
 final class ModelData: ObservableObject {
     @Published var notifications: [Notification] = load("Notifications.json")
-    @Published var podcasts: [Podcast] = load("Podcasts.json")
+    var podcastList: PodcastList = load("Podcasts.json")
     
     var categories: [String: [Podcast]] {
-        Dictionary(
+        let podcasts = podcastList.podcasts
+        return Dictionary(
             grouping: podcasts,
-            by: { $0.category.rawValue }
+            by: { $0.type.rawValue }
         )
     }
 
     var featured: Podcast? {
-        podcasts.randomElement()
+        podcastList.podcasts.randomElement()
+    }
+    
+    var podcasts: [Podcast] {
+        podcastList.podcasts
     }
 }
 

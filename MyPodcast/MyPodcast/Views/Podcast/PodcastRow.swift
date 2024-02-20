@@ -13,14 +13,11 @@ struct PodcastRow: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            Image(podcast.image)
-                .resizable()
+            AsyncImage(url: URL(string: podcast.thumbnail))
                 .frame(width: 100, height: 100)
                 .cornerRadius(8)
             VStack(alignment: .leading) {
                 Text(podcast.title)
-                Text(podcast.date)
-                    .foregroundColor(.gray)
             }
             
             Image(systemName: "play.circle.fill")

@@ -14,14 +14,11 @@ struct PodcastDetailsScreen: View {
     var body: some View {
         ScrollView(showsIndicators: false) {
                 VStack(alignment: .leading) {
-                    Image(podcast.image)
-                        .resizable()
+                    AsyncImage(url: URL(string: podcast.thumbnail))
                         .frame(width: 350, height: 350)
                         .cornerRadius(8)
                     Text(podcast.title)
                         .font(.largeTitle)
-                    Text(podcast.date)
-                        .foregroundColor(.gray)
                     Spacer()
 
                     HStack() {

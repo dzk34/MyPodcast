@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC71C9B02B84891B00BBD576 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9AF2B84891B00BBD576 /* Podcast.swift */; };
 		BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */; };
 		BCCB3FFC2B7FDB6D001899B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */; };
 		BCCB3FFE2B7FDB6F001899B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCB3FFD2B7FDB6F001899B8 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		BCCB402D2B7FDCF0001899B8 /* ExploreScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */; };
 		BCCB40302B7FDED4001899B8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB402F2B7FDED4001899B8 /* ModelData.swift */; };
 		BCCB40322B7FDF05001899B8 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40312B7FDF05001899B8 /* Notification.swift */; };
-		BCCB40342B7FDF2C001899B8 /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40332B7FDF2C001899B8 /* Podcast.swift */; };
 		BCCB40382B7FDFF1001899B8 /* Notifications.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCB40362B7FDFF1001899B8 /* Notifications.json */; };
 		BCCB40392B7FDFF1001899B8 /* Podcasts.json in Resources */ = {isa = PBXBuildFile; fileRef = BCCB40372B7FDFF1001899B8 /* Podcasts.json */; };
 		BCCB403B2B7FE116001899B8 /* LandingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB403A2B7FE115001899B8 /* LandingScreen.swift */; };
@@ -55,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BC71C9AF2B84891B00BBD576 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BCCB3FF62B7FDB6D001899B8 /* MyPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastApp.swift; sourceTree = "<group>"; };
 		BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,7 +73,6 @@
 		BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreen.swift; sourceTree = "<group>"; };
 		BCCB402F2B7FDED4001899B8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		BCCB40312B7FDF05001899B8 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
-		BCCB40332B7FDF2C001899B8 /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
 		BCCB40362B7FDFF1001899B8 /* Notifications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Notifications.json; sourceTree = "<group>"; };
 		BCCB40372B7FDFF1001899B8 /* Podcasts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Podcasts.json; sourceTree = "<group>"; };
 		BCCB403A2B7FE115001899B8 /* LandingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingScreen.swift; sourceTree = "<group>"; };
@@ -113,6 +113,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC71C9AA2B84869500BBD576 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BC71C9AD2B8488BD00BBD576 /* Utils */,
+				BC71C9AC2B8488A400BBD576 /* Domain */,
+				BC71C9AB2B84889F00BBD576 /* Data */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BC71C9AB2B84889F00BBD576 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BC71C9AC2B8488A400BBD576 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BC71C9AE2B84890F00BBD576 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BC71C9AD2B8488BD00BBD576 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB40362B7FDFF1001899B8 /* Notifications.json */,
+				BCCB40372B7FDFF1001899B8 /* Podcasts.json */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BC71C9AE2B84890F00BBD576 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BC71C9AF2B84891B00BBD576 /* Podcast.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BCCB3FED2B7FDB6D001899B8 = {
 			isa = PBXGroup;
 			children = (
@@ -136,7 +178,7 @@
 		BCCB3FF82B7FDB6D001899B8 /* MyPodcast */ = {
 			isa = PBXGroup;
 			children = (
-				BCCB40352B7FDFCA001899B8 /* Resources */,
+				BC71C9AA2B84869500BBD576 /* Core */,
 				BCCB402E2B7FDEB0001899B8 /* Models */,
 				BCCB40252B7FDC8F001899B8 /* Views */,
 				BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */,
@@ -193,18 +235,8 @@
 			children = (
 				BCCB402F2B7FDED4001899B8 /* ModelData.swift */,
 				BCCB40312B7FDF05001899B8 /* Notification.swift */,
-				BCCB40332B7FDF2C001899B8 /* Podcast.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		BCCB40352B7FDFCA001899B8 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BCCB40362B7FDFF1001899B8 /* Notifications.json */,
-				BCCB40372B7FDFF1001899B8 /* Podcasts.json */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		BCCB40432B7FEA34001899B8 /* Podcast */ = {
@@ -397,13 +429,13 @@
 				BCCB40242B7FDC47001899B8 /* MainScreen.swift in Sources */,
 				BCCB404A2B801543001899B8 /* ExploreItem.swift in Sources */,
 				BCCB40472B8013E7001899B8 /* PodcastDetailsScreen.swift in Sources */,
-				BCCB40342B7FDF2C001899B8 /* Podcast.swift in Sources */,
 				BCCB40542B801F1C001899B8 /* NotificationRow.swift in Sources */,
 				BCCB40292B7FDCCA001899B8 /* HomeScreen.swift in Sources */,
 				BCCB40512B801EDC001899B8 /* PodcastRow.swift in Sources */,
 				BCCB3FFC2B7FDB6D001899B8 /* ContentView.swift in Sources */,
 				BCCB404F2B801EC5001899B8 /* PodcastListView.swift in Sources */,
 				BCCB40302B7FDED4001899B8 /* ModelData.swift in Sources */,
+				BC71C9B02B84891B00BBD576 /* Podcast.swift in Sources */,
 				BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */,
 				BCCB40272B7FDCB4001899B8 /* ProfileScreen.swift in Sources */,
 				BCCB404D2B801CA1001899B8 /* ProgressView.swift in Sources */,
