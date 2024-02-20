@@ -38,6 +38,7 @@ struct ExploreScreen: View {
             }
             .listStyle(.plain)
             .navigationTitle("Explore")
+            
 //            .overlay {
 //              if viewModel.isLoading {
 //                ProgressView("Finding Animals near you...")
@@ -49,6 +50,7 @@ struct ExploreScreen: View {
 
 struct ExploreScreen_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreScreen(viewModel: ExploreScreenViewModel())
+        ExploreScreen(
+            viewModel: ExploreScreenViewModel(exploreFetcher: ExploreScreenService(requestManager: RequestManager())))
     }
 }

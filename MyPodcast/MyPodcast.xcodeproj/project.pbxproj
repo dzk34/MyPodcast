@@ -19,6 +19,7 @@
 		BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */; };
 		BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */; };
 		BC71C9D52B84D72D00BBD576 /* ExploreScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */; };
+		BC71C9D72B85136900BBD576 /* ExploreScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */; };
 		BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */; };
 		BCCB3FFC2B7FDB6D001899B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */; };
 		BCCB3FFE2B7FDB6F001899B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCCB3FFD2B7FDB6F001899B8 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsRequestMock.swift; sourceTree = "<group>"; };
 		BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenViewModel.swift; sourceTree = "<group>"; };
+		BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenService.swift; sourceTree = "<group>"; };
 		BCCB3FF62B7FDB6D001899B8 /* MyPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPodcastApp.swift; sourceTree = "<group>"; };
 		BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				BCCB40492B801543001899B8 /* ExploreItem.swift */,
 				BCCB402C2B7FDCF0001899B8 /* ExploreScreen.swift */,
 				BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */,
+				BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				BC71C9BE2B84A30B00BBD576 /* DataParser.swift in Sources */,
 				BC71C9D52B84D72D00BBD576 /* ExploreScreenViewModel.swift in Sources */,
 				BCCB40302B7FDED4001899B8 /* MockData.swift in Sources */,
+				BC71C9D72B85136900BBD576 /* ExploreScreenService.swift in Sources */,
 				BC71C9B32B849A2400BBD576 /* RequestProtocol.swift in Sources */,
 				BC71C9B02B84891B00BBD576 /* Podcast.swift in Sources */,
 				BC71C9BA2B84A06000BBD576 /* NetworkError.swift in Sources */,
