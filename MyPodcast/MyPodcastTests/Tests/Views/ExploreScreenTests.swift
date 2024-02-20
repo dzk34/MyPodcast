@@ -30,7 +30,8 @@ final class ExploreScreenTests: XCTestCase {
         viewModel = ExploreScreenViewModel(exploreScreenFetcher: EmptyResponseExploreScreenFetcherMock())
         
         await viewModel.fetchPodcasts()
-        XCTAssertFalse(viewModel.isLoading, "The view model shouldn't be loading when receiving empty response")
+        XCTAssertEqual(viewModel.podcasts.count, 0, "The viewModel's podcasts should be empty")
+        XCTAssertFalse(viewModel.isLoading, "The viewModel shouldn't be loading when receiving empty response")
     }
     
     func testUpdatePageOnFetchMorePodcasts() async {
