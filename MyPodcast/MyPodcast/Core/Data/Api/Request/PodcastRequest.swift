@@ -17,7 +17,7 @@ enum PodcastRequest: RequestProtocol {
         case .fecthPodcast(let id):
             return "/api/v2/podcasts/\(id)"
         case .bestPodcasts:
-            return "/wp-json/podcasts/all/most-recent"
+            return "/api/v2/best_podcasts"
         case .searchPodcasts(let term):
             return "/api/v2/search?q=\(term)"
         }
@@ -29,18 +29,4 @@ enum PodcastRequest: RequestProtocol {
             return .get
         }
     }
-
-//  var urlParams: [String: String?] {
-//    switch self {
-//    case let .getAnimalsBy(name, age, type):
-//      var params: [String: String] = [:]
-//      if !name.isEmpty {
-//        params["name"] = name
-//      }
-//
-//      return params
-//    }
-//  }
-//  
 }
-

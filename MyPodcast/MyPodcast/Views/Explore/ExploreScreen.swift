@@ -10,7 +10,10 @@ import SwiftUI
 struct ExploreScreen: View {
     @EnvironmentObject var modelData: MockData
     @State private var searchText = ""
-    
+    private let requestManager = RequestManager()
+    @State private var podcastsList: [Podcast] = []
+    @State var isLoading = true
+
     var body: some View {
         NavigationView {
             List {
@@ -21,7 +24,7 @@ struct ExploreScreen: View {
                     .cornerRadius(8)
                     .padding(.horizontal, 10)
                 
-                ForEach(modelData.podcasts) { podcast in
+                ForEach(podcastsList) { podcast in
                     Spacer()
                     NavigationLink {
                         PodcastDetailsScreen(podcast: podcast)
@@ -33,11 +36,27 @@ struct ExploreScreen: View {
                     .listRowSeparator(.hidden)
                 }
             }
-//            .scrollContentBackground(.hidden)
+            .task {
+                await fetchPodcasts()
+            }
+            .listStyle(.plain)
+            .navigationTitle("Explore")
         }
-        .navigationTitle("Explore")
-        .listStyle(.plain)
+    }
+    
+    func fetchPodcasts() async {
+        do {
+            let podcastsList2: PodcastList = try await requestManager.perform(PodcastRequest.bestPodcasts)
+            
+            self.podcastsList = podcastsList2.podcasts
 
+            await stopLoading()
+        } catch {}
+    }
+    
+    @MainActor
+    func stopLoading() async {
+      isLoading = false
     }
 }
 
