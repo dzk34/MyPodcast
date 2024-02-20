@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ModelData: ObservableObject {
+final class MockData: ObservableObject {
     @Published var notifications: [Notification] = load("Notifications.json")
     var podcastList: PodcastList = load("Podcasts.json")
     

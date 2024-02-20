@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NotificationsScreen: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: MockData
 
     var body: some View {
         NavigationView {
@@ -32,6 +32,6 @@ struct NotificationsScreen: View {
 struct NotificationsScreen_Previews: PreviewProvider {
     static var previews: some View {
         NotificationsScreen()
-            .environmentObject(ModelData())
+            .environmentObject(MockData())
     }
 }

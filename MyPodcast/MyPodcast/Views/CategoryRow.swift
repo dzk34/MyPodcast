@@ -35,7 +35,7 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Previews: PreviewProvider {
-    static var podcasts = ModelData().podcasts
+    static var podcasts = MockData().podcasts
 
     static var previews: some View {
         CategoryRow(categoryName: podcasts[0].title, items: Array(podcasts.prefix(3)))

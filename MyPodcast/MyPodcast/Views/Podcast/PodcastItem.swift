@@ -26,6 +26,6 @@ struct PodcastItem: View {
 
 struct PodcastItem_Previews: PreviewProvider {
     static var previews: some View {
-        PodcastItem(podcast: ModelData().featured!)
+        PodcastItem(podcast: MockData().featured!)
     }
 }

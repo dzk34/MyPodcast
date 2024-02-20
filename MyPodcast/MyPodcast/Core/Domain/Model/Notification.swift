@@ -14,6 +14,6 @@ struct Notification: Hashable, Codable, Identifiable {
     var podcast_id: String
     
     var podcast: Podcast? {
-        ModelData().podcasts.first(where: { $0.id == podcast_id })
+        MockData().podcasts.first(where: { $0.id == podcast_id })
     }
 }

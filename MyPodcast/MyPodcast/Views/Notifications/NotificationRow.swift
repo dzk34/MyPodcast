@@ -24,7 +24,7 @@ struct NotificationRow: View {
 }
 
 struct NotificationRow_Previews: PreviewProvider {
-    static var notifications = ModelData().notifications
+    static var notifications = MockData().notifications
     
     static var previews: some View {
         Group {

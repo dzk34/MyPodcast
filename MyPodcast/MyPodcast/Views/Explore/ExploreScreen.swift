@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ExploreScreen: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: MockData
     @State private var searchText = ""
     
     var body: some View {
@@ -44,6 +44,6 @@ struct ExploreScreen: View {
 struct ExploreScreen_Previews: PreviewProvider {
     static var previews: some View {
         ExploreScreen()
-            .environmentObject(ModelData())
+            .environmentObject(MockData())
     }
 }

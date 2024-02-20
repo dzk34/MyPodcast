@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PodcastListView: View {
-    @EnvironmentObject var modelData: ModelData
+    @EnvironmentObject var modelData: MockData
 
     var body: some View {
         List {
@@ -27,6 +27,6 @@ struct PodcastListView: View {
 struct PodcastListView_Previews: PreviewProvider {
     static var previews: some View {
         PodcastListView()
-            .environmentObject(ModelData())
+            .environmentObject(MockData())
     }
 }

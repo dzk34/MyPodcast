@@ -37,7 +37,7 @@ struct PodcastRow: View {
 }
 
 struct PodcastRow_Previews: PreviewProvider {
-    static var podcasts = ModelData().podcasts
+    static var podcasts = MockData().podcasts
 
     static var previews: some View {
         Group {

@@ -47,7 +47,7 @@ struct PodcastDetailsScreen: View {
 }
 
 struct PodcastDetailsScreen_Previews: PreviewProvider {
-    static var podcasts = ModelData().podcasts
+    static var podcasts = MockData().podcasts
 
     static var previews: some View {
         PodcastDetailsScreen(podcast: podcasts[0])

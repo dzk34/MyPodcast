@@ -11,7 +11,7 @@ struct PodcastList: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var total: Int
-    var hasNext: Bool
+    var hasNext: Bool?
     var podcasts: [Podcast]
     
     enum CodingKeys: String, CodingKey {

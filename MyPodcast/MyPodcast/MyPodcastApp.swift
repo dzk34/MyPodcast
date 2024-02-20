@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct MyPodcastApp: App {
-    @StateObject private var modelData = ModelData()
+    @StateObject private var modelData = MockData()
 
     var body: some Scene {
         WindowGroup {

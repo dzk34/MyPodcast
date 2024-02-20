@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileScreen: View {
     var body: some View {
         PodcastListView()
-            .environmentObject(ModelData())
+            .environmentObject(MockData())
     }
 }
 
