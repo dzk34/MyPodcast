@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct PodcastListView: View {
-    @EnvironmentObject var modelData: MockData
+    @ObservedObject var viewModel: PodcastListViewModel
 
     var body: some View {
         List {
-            ForEach(modelData.podcasts) { podcast in
+            ForEach(viewModel.podcasts) { podcast in
                 NavigationLink {
                         PodcastDetailsScreen(podcast: podcast)
                 } label: {
@@ -20,13 +20,16 @@ struct PodcastListView: View {
                 }
             }
         }
+        .task {
+            await viewModel.fetchPodcasts()
+        }
         .listStyle(.plain)
     }
 }
 
 struct PodcastListView_Previews: PreviewProvider {
     static var previews: some View {
-        PodcastListView()
-            .environmentObject(MockData())
+        PodcastListView(
+            viewModel: PodcastListViewModel(podcastListFetcher: PodcastListService(requestManager: RequestManager())))
     }
 }

@@ -15,8 +15,7 @@ struct ProfileScreen: View {
                 ProfileText()
             }
             Spacer()
-            PodcastListView()
-                .environmentObject(MockData())
+            PodcastListView(viewModel: PodcastListViewModel(podcastListFetcher: PodcastListService(requestManager: RequestManager())))
         }
     }
 }

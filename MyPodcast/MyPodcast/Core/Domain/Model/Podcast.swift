@@ -7,6 +7,18 @@
 
 import Foundation
 
+struct Playlist: Hashable, Codable {
+    var total: Int
+    var hasNext: Bool?
+    var playlists: [Podcast]
+
+    enum CodingKeys: String, CodingKey {
+        case hasNext = "has_next"
+        case total, playlists
+    }
+
+}
+
 struct PodcastList: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
