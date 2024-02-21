@@ -9,6 +9,7 @@ Technical:
 - Abstarct the API layer so we can switch to another API provider (spotify....)
 - Unit tests
 - UI tests (coming later)
+- Deeplinks
 - Data persistency (for favorites, play time...) coming later
 
 Design: 

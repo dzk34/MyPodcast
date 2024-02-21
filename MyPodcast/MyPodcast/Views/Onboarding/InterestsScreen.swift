@@ -13,6 +13,8 @@ struct InterestsScreen: View {
             VStack {
                 Text("INTERESTS")
                 Spacer()
+                Text("Select your interestes and we'll show you inspiring podcasts that you will enjoy")
+                Spacer()
                 Image("tags-cloud")
                     .resizable()
                     .frame(width: 380, height: 380)

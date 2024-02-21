@@ -10,7 +10,7 @@ import Foundation
 enum APIConstants {
     static let host = "listen-api-test.listennotes.com"
     static let clientCredentials = "client_credentials"
-    static let clientId = "clientId"
-    static let clientSecret = "clientSecret"
+    static let clientId = "client_id"
+    static let clientSecret = "client_secret"
     static let scheme = "https"
 }

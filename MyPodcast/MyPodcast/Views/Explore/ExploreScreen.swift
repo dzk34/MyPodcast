@@ -38,12 +38,6 @@ struct ExploreScreen: View {
             }
             .listStyle(.plain)
             .navigationTitle("Explore")
-            
-//            .overlay {
-//              if viewModel.isLoading {
-//                ProgressView("Finding Animals near you...")
-//              }
-//            }
         }
     }
 }

@@ -13,10 +13,11 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             List {
+                Text("Featured")
                 if let featuredPodcast = modelData.featured {
                     AsyncImage(url: URL(string: featuredPodcast.thumbnail))
-                        .scaledToFill()
-                        .frame(height: 200)
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 250)
                         .clipped()
                         .listRowInsets(EdgeInsets())
                 }
@@ -30,6 +31,7 @@ struct HomeScreen: View {
             }
             .listStyle(.plain)
         }
+        .padding(.top)
     }
 }
 

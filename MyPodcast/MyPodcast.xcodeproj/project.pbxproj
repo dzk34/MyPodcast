@@ -143,6 +143,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC01C6932B85FED300C8058F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB40412B7FE9C7001899B8 /* CategoryRow.swift */,
+				BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BC01C6962B86034200C8058F /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		BC71C9AA2B84869500BBD576 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -359,14 +376,13 @@
 		BCCB40252B7FDC8F001899B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCB40482B801536001899B8 /* Explore */,
+				BC01C6932B85FED300C8058F /* Home */,
 				BCCB40522B801F0F001899B8 /* Notifications */,
 				BCCB404B2B801C98001899B8 /* Player */,
-				BCCB40482B801536001899B8 /* Explore */,
-				BCCB40432B7FEA34001899B8 /* Podcast */,
-				BCCB40262B7FDCB4001899B8 /* ProfileScreen.swift */,
-				BCCB40282B7FDCCA001899B8 /* HomeScreen.swift */,
 				BCCB40552B801F45001899B8 /* Onboarding */,
-				BCCB40412B7FE9C7001899B8 /* CategoryRow.swift */,
+				BCCB40432B7FEA34001899B8 /* Podcast */,
+				BC01C6962B86034200C8058F /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
