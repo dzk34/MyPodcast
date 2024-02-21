@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileScreen: View {
+    @EnvironmentObject var viewModelFactory: ViewModelFactory
+    
     var body: some View {
         VStack {
             VStack {
@@ -15,7 +17,7 @@ struct ProfileScreen: View {
                 ProfileText()
             }
             Spacer()
-            PodcastListView(viewModel: PodcastListViewModel(podcastListFetcher: PodcastListService(requestManager: RequestManager())))
+            PodcastListView(viewModel: viewModelFactory.makePodcastListViewModel())
         }
     }
 }

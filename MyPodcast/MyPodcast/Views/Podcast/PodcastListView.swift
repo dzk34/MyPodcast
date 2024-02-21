@@ -26,10 +26,3 @@ struct PodcastListView: View {
         .listStyle(.plain)
     }
 }
-
-struct PodcastListView_Previews: PreviewProvider {
-    static var previews: some View {
-        PodcastListView(
-            viewModel: PodcastListViewModel(podcastListFetcher: PodcastListService(requestManager: RequestManager())))
-    }
-}

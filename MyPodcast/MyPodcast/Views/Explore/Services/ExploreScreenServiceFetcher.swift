@@ -1,5 +1,5 @@
 //
-//  ExploreScreenService.swift
+//  ExploreScreenServiceFetcher.swift
 //  MyPodcast
 //
 //  Created by khaledus on 20/02/2024.
@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct ExploreScreenService {
+protocol ExploreScreenFetcher {
+    func fetchPodcasts() async -> [Podcast]
+}
+
+struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
     private let requestManager: RequestManagerProtocol
 
     init(requestManager: RequestManagerProtocol) {
@@ -15,7 +19,7 @@ struct ExploreScreenService {
     }
 }
 
-extension ExploreScreenService: ExploreScreenFetcher {
+extension ExploreScreenServiceFetcher {
     func fetchPodcasts() async -> [Podcast] {
         let requestData = PodcastRequest.bestPodcasts
         

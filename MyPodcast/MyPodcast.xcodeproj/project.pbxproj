@@ -22,7 +22,7 @@
 		BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */; };
 		BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */; };
 		BC71C9D52B84D72D00BBD576 /* ExploreScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */; };
-		BC71C9D72B85136900BBD576 /* ExploreScreenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */; };
+		BC71C9D72B85136900BBD576 /* ExploreScreenServiceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9D62B85136900BBD576 /* ExploreScreenServiceFetcher.swift */; };
 		BC71C9DB2B8522D200BBD576 /* ExploreScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9DA2B8522D200BBD576 /* ExploreScreenTests.swift */; };
 		BC71C9DE2B85244D00BBD576 /* ExploreScreenFetcherMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC71C9DD2B85244D00BBD576 /* ExploreScreenFetcherMock.swift */; };
 		BCCB3FFA2B7FDB6D001899B8 /* MyPodcastApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB3FF92B7FDB6D001899B8 /* MyPodcastApp.swift */; };
@@ -52,6 +52,7 @@
 		BCCB404F2B801EC5001899B8 /* PodcastListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB404E2B801EC5001899B8 /* PodcastListView.swift */; };
 		BCCB40512B801EDC001899B8 /* PodcastRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40502B801EDC001899B8 /* PodcastRow.swift */; };
 		BCCB40542B801F1C001899B8 /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCB40532B801F1C001899B8 /* NotificationRow.swift */; };
+		BCE46B882B86346E000FC4D5 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE46B872B86346E000FC4D5 /* ViewModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +88,7 @@
 		BC71C9D02B84B0DC00BBD576 /* PodcastsRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsRequestMock.swift; sourceTree = "<group>"; };
 		BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerTests.swift; sourceTree = "<group>"; };
 		BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenViewModel.swift; sourceTree = "<group>"; };
-		BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenService.swift; sourceTree = "<group>"; };
+		BC71C9D62B85136900BBD576 /* ExploreScreenServiceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenServiceFetcher.swift; sourceTree = "<group>"; };
 		BC71C9DA2B8522D200BBD576 /* ExploreScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenTests.swift; sourceTree = "<group>"; };
 		BC71C9DD2B85244D00BBD576 /* ExploreScreenFetcherMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenFetcherMock.swift; sourceTree = "<group>"; };
 		BCCB3FF62B7FDB6D001899B8 /* MyPodcast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPodcast.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +121,7 @@
 		BCCB404E2B801EC5001899B8 /* PodcastListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListView.swift; sourceTree = "<group>"; };
 		BCCB40502B801EDC001899B8 /* PodcastRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastRow.swift; sourceTree = "<group>"; };
 		BCCB40532B801F1C001899B8 /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
+		BCE46B872B86346E000FC4D5 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				BC71C9AD2B8488BD00BBD576 /* Utils */,
 				BC71C9AC2B8488A400BBD576 /* Domain */,
 				BC71C9AB2B84889F00BBD576 /* Data */,
+				BCE46B872B86346E000FC4D5 /* ViewModelFactory.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -304,7 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				BC71C9D42B84D72D00BBD576 /* ExploreScreenViewModel.swift */,
-				BC71C9D62B85136900BBD576 /* ExploreScreenService.swift */,
+				BC71C9D62B85136900BBD576 /* ExploreScreenServiceFetcher.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -355,7 +358,6 @@
 				BCCB3FFB2B7FDB6D001899B8 /* ContentView.swift */,
 				BCCB3FFD2B7FDB6F001899B8 /* Assets.xcassets */,
 				BCCB3FFF2B7FDB6F001899B8 /* Preview Content */,
-				BCCB40232B7FDC47001899B8 /* MainScreen.swift */,
 			);
 			path = MyPodcast;
 			sourceTree = "<group>";
@@ -389,6 +391,7 @@
 		BCCB40252B7FDC8F001899B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCB40232B7FDC47001899B8 /* MainScreen.swift */,
 				BCCB40482B801536001899B8 /* Explore */,
 				BC01C6932B85FED300C8058F /* Home */,
 				BCCB40522B801F0F001899B8 /* Notifications */,
@@ -582,6 +585,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCCB402B2B7FDCDD001899B8 /* NotificationsScreen.swift in Sources */,
+				BCE46B882B86346E000FC4D5 /* ViewModelFactory.swift in Sources */,
 				BCCB403D2B7FE135001899B8 /* InterestsScreen.swift in Sources */,
 				BCCB402D2B7FDCF0001899B8 /* ExploreScreen.swift in Sources */,
 				BCCB403B2B7FE116001899B8 /* LandingScreen.swift in Sources */,
@@ -605,7 +609,7 @@
 				BC71C9D52B84D72D00BBD576 /* ExploreScreenViewModel.swift in Sources */,
 				BCCB40302B7FDED4001899B8 /* MockData.swift in Sources */,
 				BC01C69D2B860B7C00C8058F /* PodcastListService.swift in Sources */,
-				BC71C9D72B85136900BBD576 /* ExploreScreenService.swift in Sources */,
+				BC71C9D72B85136900BBD576 /* ExploreScreenServiceFetcher.swift in Sources */,
 				BC71C9B32B849A2400BBD576 /* RequestProtocol.swift in Sources */,
 				BC71C9B02B84891B00BBD576 /* Podcast.swift in Sources */,
 				BC71C9BA2B84A06000BBD576 /* NetworkError.swift in Sources */,

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MainScreen: View {
     @State private var selection: Tab = .home
+    @EnvironmentObject var viewModelFactory: ViewModelFactory
     
     enum Tab {
         case home
@@ -25,7 +26,7 @@ struct MainScreen: View {
                 }
                 .tag(Tab.home)            
 
-            ExploreScreen(viewModel: ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenService(requestManager: RequestManager())))
+            ExploreScreen(viewModel: viewModelFactory.makeExploreScreenViewModel())
                 .tabItem {
                     Label("Explore", systemImage: "signpost.right.and.left")
                 }

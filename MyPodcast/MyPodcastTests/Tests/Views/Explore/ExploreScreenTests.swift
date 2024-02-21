@@ -17,7 +17,7 @@ final class ExploreScreenTests: XCTestCase {
     @MainActor
     override func setUp() {
         super.setUp()
-      viewModel = ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenFetcherMock())
+      viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: ExploreScreenFetcherMock())
     }
     
     func testExploreScreenLoadingState() async {
@@ -27,7 +27,7 @@ final class ExploreScreenTests: XCTestCase {
     }
     
     func testExploreScreenFetcherEmptyResponse() async {
-        viewModel = ExploreScreenViewModel(exploreScreenFetcher: EmptyResponseExploreScreenFetcherMock())
+        viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: EmptyResponseExploreScreenFetcherMock())
         
         await viewModel.fetchPodcasts()
         XCTAssertEqual(viewModel.podcasts.count, 0, "The viewModel's podcasts should be empty")

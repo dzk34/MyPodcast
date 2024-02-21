@@ -7,24 +7,21 @@
 
 import Foundation
 
-protocol ExploreScreenFetcher {
-    func fetchPodcasts() async -> [Podcast]
-}
 
 @MainActor
 final class ExploreScreenViewModel: ObservableObject {
-    private let exploreScreenFetcher: ExploreScreenFetcher
+    private let exploreScreenServiceFetcher: ExploreScreenFetcher
     @Published var isLoading: Bool
     @Published var podcasts: [Podcast] = []
 
-    init(isLoading: Bool = true, exploreScreenFetcher: ExploreScreenFetcher) {
+    init(isLoading: Bool = true, exploreScreenServiceFetcher: ExploreScreenFetcher) {
         self.isLoading = isLoading
-        self.exploreScreenFetcher = exploreScreenFetcher
+        self.exploreScreenServiceFetcher = exploreScreenServiceFetcher
     }
     
     func fetchPodcasts() async {
         isLoading = true
-        self.podcasts = await exploreScreenFetcher.fetchPodcasts()
+        self.podcasts = await exploreScreenServiceFetcher.fetchPodcasts()
         isLoading = false
     }
     
