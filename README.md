@@ -15,3 +15,7 @@ Technical:
 Design: 
 
 ![alt text](https://github.com/dzk34/MyPodcast/blob/master/MyPodcast-Diagram.jpeg?raw=true)
+
+
+Architecture diagram:
+![alt text](https://github.com/dzk34/MyPodcast/blob/develop/architecture-diagram.jpg)
