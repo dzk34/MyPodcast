@@ -11,25 +11,25 @@ struct MainScreen: View {
     @State private var selection: Tab = .home
     
     enum Tab {
-        case explore
         case home
+        case explore
         case mylist
         case notifications
     }
 
     var body: some View {
         TabView {
-            ExploreScreen(viewModel: ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenService(requestManager: RequestManager())))
-                .tabItem {
-                    Label("Explore", systemImage: "signpost.right.and.left")
-                }
-                .tag(Tab.explore)
-
             HomeScreen()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
                 .tag(Tab.home)            
+
+            ExploreScreen(viewModel: ExploreScreenViewModel(exploreScreenFetcher: ExploreScreenService(requestManager: RequestManager())))
+                .tabItem {
+                    Label("Explore", systemImage: "signpost.right.and.left")
+                }
+                .tag(Tab.explore)
 
             NotificationsScreen()
                 .tabItem {
