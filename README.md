@@ -5,10 +5,11 @@ MyPodcast is a simple prototype application that gives a user a podcasts player,
 - add to favorites, share.... 
 
 Technical:
-- Implement GraphQL api support. Currently data is hard coded (I couldn't find a podcasts Rest api), but the plan is to use https://taddy.org/developers or https://features.podchaser.com/api/)
+- Implement the API from ListenNotes https://www.listennotes.com/api/  (while waiting to get an API key after registering, will use their mock test API https://www.listennotes.help/article/48-how-to-test-the-podcast-api-without-an-api-key ). 
+- Abstarct the API layer so we can switch to another API provider (spotify....)
 - Unit tests
-- UI tests
-- Data persistency (for favorites, play time...)
+- UI tests (coming later)
+- Data persistency (for favorites, play time...) coming later
 
 Design: 
 
