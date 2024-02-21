@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct PodcastListService {
+protocol PodcastListFetcher {
+    func fetchPodcasts() async -> [Podcast]
+}
+
+struct PodcastListServiceFetcher {
     private let requestManager: RequestManagerProtocol
 
     init(requestManager: RequestManagerProtocol) {
@@ -15,7 +19,7 @@ struct PodcastListService {
     }
 }
 
-extension PodcastListService: PodcastListFetcher {
+extension PodcastListServiceFetcher: PodcastListFetcher {
     func fetchPodcasts() async -> [Podcast] {
         let requestData = PodcastRequest.bestPodcasts
         

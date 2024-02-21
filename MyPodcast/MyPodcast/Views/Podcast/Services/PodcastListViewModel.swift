@@ -7,27 +7,22 @@
 
 import Foundation
 
-protocol PodcastListFetcher {
-    func fetchPodcasts() async -> [Podcast]
-}
-
 @MainActor
 final class PodcastListViewModel: ObservableObject {
-    private let podcastListFetcher: PodcastListFetcher
+    private let podcastListServiceFetcher: PodcastListServiceFetcher
     @Published var isLoading: Bool
     @Published var podcasts: [Podcast] = []
 
-    init(isLoading: Bool = true, podcastListFetcher: PodcastListFetcher) {
+    init(isLoading: Bool = true, podcastListServiceFetcher: PodcastListServiceFetcher) {
         self.isLoading = isLoading
-        self.podcastListFetcher = podcastListFetcher
+        self.podcastListServiceFetcher = podcastListServiceFetcher
     }
     
     func fetchPodcasts() async {
         isLoading = true
-        self.podcasts = await podcastListFetcher.fetchPodcasts()
+        self.podcasts = await podcastListServiceFetcher.fetchPodcasts()
         isLoading = false
     }
-    
 
     func stopLoading() async {
       isLoading = false
