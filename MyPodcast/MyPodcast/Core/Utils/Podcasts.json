@@ -406,7 +406,7 @@
         {
             "id": "2184bada602d431689dbb4c6c1bc5839",
             "rss": "https://feeds.simplecast.com/atgtihd0",
-            "type": "episodic",
+            "type": "sport",
             "email": "interactive@life.church",
             "extra": {
                 "url1": "",
@@ -459,7 +459,7 @@
         {
             "id": "c5ce6c02cbf1486496206829f7d42e8e",
             "rss": "https://rss.art19.com/the-best-one-yet",
-            "type": "episodic",
+            "type": "sport",
             "email": "iwonder@wondery.com",
             "extra": {
                 "url1": "http://www.marketsnacks.com/",
@@ -515,7 +515,7 @@
         {
             "id": "fc6d33e22b7f4db38df3bb64a9a8c227",
             "rss": "https://tonyrobbins.libsyn.com/rss",
-            "type": "episodic",
+            "type": "sport",
             "email": "tonyrobbins.social@gmail.com",
             "extra": {
                 "url1": "",
@@ -575,7 +575,7 @@
         {
             "id": "ed79b615ed074204bc4702b56a264a78",
             "rss": "https://thelifecoachschool.libsyn.com/rss",
-            "type": "episodic",
+            "type": "sport",
             "email": "brooke@thelifecoachschool.com",
             "extra": {
                 "url1": "",
@@ -633,7 +633,7 @@
         {
             "id": "d863da7f921e435fb35f512b54e774d6",
             "rss": "https://rss.art19.com/masters-of-scale",
-            "type": "episodic",
+            "type": "sport",
             "email": "hello@mastersofscale.com",
             "extra": {
                 "url1": "",
@@ -693,7 +693,7 @@
         {
             "id": "5590cb1318054bceb942564a4f067eb6",
             "rss": "https://www.marketplace.org/feed/podcast/marketplace",
-            "type": "episodic",
+            "type": "sport",
             "email": "marketplacecomments@marketplace.org",
             "extra": {
                 "url1": "",
@@ -749,7 +749,7 @@
         {
             "id": "13a7957aeac34e1c9e004f2a2ced5fb0",
             "rss": "https://feeds.megaphone.fm/pivot",
-            "type": "episodic",
+            "type": "sport",
             "email": "pivot@voxmedia.com",
             "extra": {
                 "url1": "",
@@ -809,7 +809,7 @@
         {
             "id": "23bd4f3432c2452d93f525e2446a5878",
             "rss": "https://feeds.simplecast.com/4YELvXgu",
-            "type": "episodic",
+            "type": "business",
             "email": "rss@earwolf.com",
             "extra": {
                 "url1": "",
@@ -864,7 +864,7 @@
         {
             "id": "fbecfdd4116e4e7a954bd6bc4cb0b406",
             "rss": "https://feeds.megaphone.fm/YAP3268529120",
-            "type": "episodic",
+            "type": "business",
             "email": "podcast@amyporterfield.com",
             "extra": {
                 "url1": "",
@@ -921,7 +921,7 @@
         {
             "id": "d1336f3217eb4510bdbcdf021a38de38",
             "rss": "https://feeds.megaphone.fm/ADL1740142880",
-            "type": "episodic",
+            "type": "business",
             "email": "podcasts@qcodemedia.com",
             "extra": {
                 "url1": "",
@@ -984,7 +984,7 @@
         {
             "id": "0da3baee05cc47e4b3222da775573efe",
             "rss": "https://feeds.megaphone.fm/PPLLC8974708240",
-            "type": "episodic",
+            "type": "business",
             "email": "stig@theinvestorspodcast.com",
             "extra": {
                 "url1": "",
@@ -1041,7 +1041,7 @@
         {
             "id": "f4a7bdbef7a84fd0b4a712b70a3c5ec5",
             "rss": "https://choosefi.libsyn.com/rss",
-            "type": "episodic",
+            "type": "business",
             "email": "feedback@choosefi.com",
             "extra": {
                 "url1": "",
@@ -1101,7 +1101,7 @@
         {
             "id": "40b72ce8610649529542575dedf06c86",
             "rss": "https://allinchamathjason.libsyn.com/rss",
-            "type": "episodic",
+            "type": "business",
             "email": "theallinpod@gmail.com",
             "extra": {
                 "url1": "",
