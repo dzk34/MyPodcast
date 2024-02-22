@@ -7,7 +7,7 @@
 
 import Foundation
 
-@MainActor
+
 final class PodcastListViewModel: ObservableObject {
     private let podcastListServiceFetcher: PodcastListServiceFetcher
     @Published var isLoading: Bool
@@ -17,13 +17,15 @@ final class PodcastListViewModel: ObservableObject {
         self.isLoading = isLoading
         self.podcastListServiceFetcher = podcastListServiceFetcher
     }
-    
+
+    @MainActor
     func fetchPodcasts() async {
         isLoading = true
         self.podcasts = await podcastListServiceFetcher.fetchPodcasts()
         isLoading = false
     }
 
+    @MainActor
     func stopLoading() async {
       isLoading = false
     }

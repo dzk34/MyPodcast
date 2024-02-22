@@ -10,11 +10,10 @@ import XCTest
 
 @testable import MyPodcast
 
-@MainActor
+
 final class ExploreScreenTests: XCTestCase {
     var viewModel: ExploreScreenViewModel!
     
-    @MainActor
     override func setUp() {
         super.setUp()
       viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: ExploreScreenFetcherMock())
