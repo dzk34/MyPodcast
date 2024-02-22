@@ -8,7 +8,6 @@
 import Foundation
 
 
-@MainActor
 final class ExploreScreenViewModel: ObservableObject {
     private let exploreScreenServiceFetcher: ExploreScreenFetcher
     @Published var isLoading: Bool
@@ -19,13 +18,14 @@ final class ExploreScreenViewModel: ObservableObject {
         self.exploreScreenServiceFetcher = exploreScreenServiceFetcher
     }
     
+    @MainActor
     func fetchPodcasts() async {
         isLoading = true
         self.podcasts = await exploreScreenServiceFetcher.fetchPodcasts()
         isLoading = false
     }
     
-
+    @MainActor
     func stopLoading() async {
       isLoading = false
     }
