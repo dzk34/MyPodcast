@@ -19,7 +19,7 @@ struct LandingScreen: View {
                 Spacer()
                 Text("Discover podcasts, listen everywhere and share with your friends")
                 Spacer()
-                NavigationLink(destination: InterestsScreen()) {
+                NavigationLink(destination: MainScreen()) {
                     Text("START")
                         .padding()
                         .foregroundColor(.white)
