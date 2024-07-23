@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandingScreen: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .center) {
                 Spacer()
                 Image("logo")
@@ -19,7 +19,7 @@ struct LandingScreen: View {
                 Spacer()
                 Text("Discover podcasts, listen everywhere and share with your friends")
                 Spacer()
-                NavigationLink(destination: InterestsScreen()) {
+                NavigationLink(destination: MainScreen()) {
                     Text("START")
                         .padding()
                         .foregroundColor(.white)

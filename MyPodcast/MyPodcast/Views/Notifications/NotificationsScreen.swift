@@ -11,7 +11,7 @@ struct NotificationsScreen: View {
     @EnvironmentObject var modelData: MockData
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(modelData.notifications) { notification in
                     NavigationLink {

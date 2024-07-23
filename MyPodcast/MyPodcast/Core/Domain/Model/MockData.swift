@@ -15,7 +15,7 @@ final class MockData: ObservableObject {
         let podcasts = podcastList.podcasts
         return Dictionary(
             grouping: podcasts,
-            by: { $0.type.rawValue }
+            by: { $0.type }
         )
     }
 

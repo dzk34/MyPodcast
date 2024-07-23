@@ -10,7 +10,7 @@ import Foundation
 @testable import MyPodcast
 
 struct APIManagerMock: APIManagerProtocol {
-    func perform(_ request: RequestProtocol, authToken: String) async throws -> Data {
+    func perform(_ request: RequestProtocol) async throws -> Data {
         return try Data(contentsOf: URL(fileURLWithPath: request.path), options: .mappedIfSafe)
     }
 }

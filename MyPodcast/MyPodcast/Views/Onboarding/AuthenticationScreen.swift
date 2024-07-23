@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AuthenticationScreen: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Spacer()
                 Image("logo")

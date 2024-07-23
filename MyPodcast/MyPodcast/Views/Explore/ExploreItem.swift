@@ -12,7 +12,9 @@ struct ExploreItem: View {
 
     var body: some View {
         VStack(alignment: .leading) {
+            Divider()
             Text(podcast.title)
+                .font(.title)
             AsyncImage(url: URL(string: podcast.thumbnail))
                 .scaledToFill()
                 .frame(height: 200)
@@ -20,6 +22,8 @@ struct ExploreItem: View {
                 .listRowInsets(EdgeInsets())
                 .cornerRadius(8)
             Text(podcast.description)
+                .lineLimit(5)
+            Spacer()
         }
     }
 }

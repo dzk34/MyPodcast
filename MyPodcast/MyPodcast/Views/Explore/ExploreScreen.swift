@@ -8,34 +8,26 @@
 import SwiftUI
 
 struct ExploreScreen: View {
-    @State private var searchText = ""
     @ObservedObject var viewModel: ExploreScreenViewModel
-    
+    @EnvironmentObject var viewModelFactory: ViewModelFactory
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
-                TextField("Search ...", text: $searchText)
-                    .padding(7)
-                    .padding(.horizontal, 25)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.horizontal, 10)
-                
-                ForEach(viewModel.podcasts) { podcast in
-                    Spacer()
+                ForEach(viewModel.genres) { genre in
                     NavigationLink {
-                        PodcastDetailsScreen(podcast: podcast)
+                        GenreDetailScreen(genre: genre, viewModel: viewModelFactory.makeGenreViewModel())
                     } label: {
-                        Divider()
-                        ExploreItem(podcast: podcast)
+                        GenreView(genre: genre)
                     }
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                 }
             }
             .task {
-                await viewModel.fetchPodcasts()
+                await viewModel.fetchGenres()
             }
+            .padding()
             .listStyle(.plain)
             .navigationTitle("Explore")
         }

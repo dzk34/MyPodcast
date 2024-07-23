@@ -11,7 +11,7 @@ import Foundation
 final class ExploreScreenViewModel: ObservableObject {
     private let exploreScreenServiceFetcher: ExploreScreenFetcher
     @Published var isLoading: Bool
-    @Published var podcasts: [Podcast] = []
+    @Published var genres: [Genre] = []
 
     init(isLoading: Bool = true, exploreScreenServiceFetcher: ExploreScreenFetcher) {
         self.isLoading = isLoading
@@ -19,9 +19,9 @@ final class ExploreScreenViewModel: ObservableObject {
     }
     
     @MainActor
-    func fetchPodcasts() async {
+    func fetchGenres() async {
         isLoading = true
-        self.podcasts = await exploreScreenServiceFetcher.fetchPodcasts()
+        self.genres = await exploreScreenServiceFetcher.fetchGenres()
         isLoading = false
     }
     

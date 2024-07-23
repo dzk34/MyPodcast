@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InterestsScreen: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Text("INTERESTS")
                 Spacer()

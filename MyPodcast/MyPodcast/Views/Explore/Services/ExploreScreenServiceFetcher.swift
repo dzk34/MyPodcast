@@ -8,6 +8,7 @@
 import Foundation
 
 protocol ExploreScreenFetcher {
+    func fetchGenres() async -> [Genre]
     func fetchPodcasts() async -> [Podcast]
 }
 
@@ -20,6 +21,18 @@ struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
 }
 
 extension ExploreScreenServiceFetcher {
+    func fetchGenres() async -> [Genre] {
+        let requestData = PodcastRequest.genres
+        
+        do {
+            let genresList: GenresList = try await requestManager.perform(requestData)
+            return genresList.genres
+        } catch {
+            print(error)
+            return []
+        }
+    }
+    
     func fetchPodcasts() async -> [Podcast] {
         let requestData = PodcastRequest.bestPodcasts
         
@@ -27,7 +40,7 @@ extension ExploreScreenServiceFetcher {
             let podcastList: PodcastList = try await requestManager.perform(requestData)
             return podcastList.podcasts
         } catch {
-            print(error.localizedDescription)
+            print(error)
             return []
         }
     }
