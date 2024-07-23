@@ -23,6 +23,7 @@ struct ExploreItem: View {
                 .cornerRadius(8)
             Text(podcast.description)
                 .lineLimit(5)
+            Spacer()
         }
     }
 }

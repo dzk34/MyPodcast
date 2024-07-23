@@ -39,6 +39,15 @@ class ViewModelFactory: ObservableObject {
     func makePodcastListViewModel() -> PodcastListViewModel {
         PodcastListViewModel(podcastListServiceFetcher: makePodcastListServiceFetcher())
     }
+    
+    // MARK: - Genre Screen
+    func makeGenreServiceFetcher() -> GenreScreenServiceFetcher {
+        GenreScreenServiceFetcher(requestManager: requestManager)
+    }
+    
+    func makeGenreViewModel() -> GenreViewModel {
+        GenreViewModel(genreServiceFetcher: makeGenreServiceFetcher())
+    }
 }
 
 extension ViewModelFactory {

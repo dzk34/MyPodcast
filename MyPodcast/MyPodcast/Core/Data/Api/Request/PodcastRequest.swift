@@ -31,13 +31,22 @@ enum PodcastRequest: RequestProtocol {
             return "/api/v2/search?q=\(term)"
         case .playlists:
             return "/api/v2/playlists"
-        case .podcastsByGenre(let id):
-            return "/api/v2/best_podcasts?genre_id=\(id)"
+        case .podcastsByGenre(_):
+            return "/api/v2/best_podcasts"
         case .genres:
             return "/api/v2/genres"
         }
     }
 
+    var urlParams: [String : String?] {
+        switch self {
+        case .podcastsByGenre(id: let id):
+            ["genre_id": String(id)]
+        default:
+            [:]
+        }
+    }
+    
     var requestType: RequestType {
         switch self {
         default:

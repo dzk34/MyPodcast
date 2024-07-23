@@ -13,5 +13,5 @@ enum APIConstants {
     static let clientId = "client_id"
     static let clientSecret = "client_secret"
     static let scheme = "https"
-    static let apiKey = "137a6fd63a7a4fdc85952078cba0f774"
+    static let apiKey = ""
 }

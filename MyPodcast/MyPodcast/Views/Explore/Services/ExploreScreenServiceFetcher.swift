@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ExploreScreenFetcher {
-    func genres() async -> [Genre]
+    func fetchGenres() async -> [Genre]
     func fetchPodcasts() async -> [Podcast]
 }
 
@@ -21,7 +21,7 @@ struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
 }
 
 extension ExploreScreenServiceFetcher {
-    func genres() async -> [Genre] {
+    func fetchGenres() async -> [Genre] {
         let requestData = PodcastRequest.genres
         
         do {

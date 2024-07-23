@@ -25,9 +25,11 @@ struct PodcastList: Hashable, Codable, Identifiable {
     var total: Int
     var hasNext: Bool?
     var podcasts: [Podcast]
-    
+    var parentId: Int?
+
     enum CodingKeys: String, CodingKey {
         case hasNext = "has_next"
+        case parentId = "parent_id"
         case id, name, total, podcasts
     }
 }
@@ -44,12 +46,6 @@ struct Podcast: Hashable, Codable, Identifiable {
     var thumbnail: String
     var rss: String
     var type: String
-}
-
-enum PodcastType: String, CaseIterable, Codable {//dzk
-    case episodic = "episodic"
-    case sport = "sport"
-    case business = "business"
 }
 
 struct GenresList: Codable {

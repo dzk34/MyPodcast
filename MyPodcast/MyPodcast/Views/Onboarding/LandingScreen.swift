@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandingScreen: View {
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack(alignment: .center) {
                 Spacer()
                 Image("logo")

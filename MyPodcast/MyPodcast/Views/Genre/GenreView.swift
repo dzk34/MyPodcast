@@ -12,14 +12,13 @@ struct GenreView: View {
 
     var body: some View {
         HStack {
-             Spacer()
+            Spacer()
             Text(genre.name)
                 .font(.title)
             Spacer()
         }
         .padding(.vertical, 40)
         .background(Color.random(randomOpacity: true))
-//             .cornerRadius(20)
     }
 }
 

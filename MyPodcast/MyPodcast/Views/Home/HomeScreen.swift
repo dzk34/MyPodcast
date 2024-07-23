@@ -11,7 +11,7 @@ struct HomeScreen: View {
     @ObservedObject var viewModel: HomeScreenViewModel
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 Text("Best Podcasts")
                 ForEach(viewModel.podcasts) { podcast in
@@ -29,7 +29,7 @@ struct HomeScreen: View {
             .listStyle(.plain)
         }
         .task {
-            await viewModel.fetchPodcasts()//dzk
+            await viewModel.fetchPodcasts()
         }
 
         .padding(.top)

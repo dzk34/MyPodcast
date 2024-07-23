@@ -21,7 +21,7 @@ struct PodcastListPreview: View {
             }
         }
         .task {
-            await viewModel.fetchPodcasts()//dzk
+            await viewModel.fetchPodcasts()
         }
         .listStyle(.plain)
     }

@@ -12,14 +12,12 @@ struct GenreDetailScreen: View {
     @ObservedObject var viewModel: GenreViewModel
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(viewModel.podcasts) { podcast in
-                    Spacer()
                     NavigationLink {
                         PodcastDetailsScreen(podcast: podcast)
                     } label: {
-                        Divider()
                         ExploreItem(podcast: podcast)
                     }
                     .listRowInsets(EdgeInsets())
@@ -31,7 +29,7 @@ struct GenreDetailScreen: View {
             }
             .padding()
             .listStyle(.plain)
-            .navigationTitle("Explore")
+            .navigationTitle(genre.name)
         }
     }
 }

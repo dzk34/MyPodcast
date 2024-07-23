@@ -21,7 +21,7 @@ final class PodcastListViewModel: ObservableObject {
     @MainActor
     func fetchPodcasts() async {
         isLoading = true
-        self.podcasts = await podcastListServiceFetcher.fetchPodcasts()//dzk
+        self.podcasts = await podcastListServiceFetcher.fetchPodcasts()
         isLoading = false
     }
 
