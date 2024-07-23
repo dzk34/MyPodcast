@@ -10,6 +10,11 @@ import Foundation
 @testable import MyPodcast
 
 struct ExploreScreenFetcherMock: ExploreScreenFetcher {
+    func fetchGenres() async -> [Genre] {
+        let genresList: GenresList = load("Genres.json")
+        return genresList.genres
+    }
+    
     func fetchPodcasts() async -> [Podcast] {
         let podcastList: PodcastList = load("Podcasts.json")
         return podcastList.podcasts
@@ -39,7 +44,11 @@ struct ExploreScreenFetcherMock: ExploreScreenFetcher {
 }
 
 struct EmptyResponseExploreScreenFetcherMock: ExploreScreenFetcher {
+    func fetchGenres() async -> [Genre] {
+        []
+    }
+    
     func fetchPodcasts() async -> [Podcast] {
-        return []
+        []
     }
 }

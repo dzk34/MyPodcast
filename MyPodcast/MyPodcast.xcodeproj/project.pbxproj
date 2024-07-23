@@ -15,6 +15,9 @@
 		29BC9FE92C4FE3400045B6B0 /* GenreDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9FE82C4FE3400045B6B0 /* GenreDetailScreen.swift */; };
 		29BC9FEB2C4FEAA50045B6B0 /* GenreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9FEA2C4FEAA50045B6B0 /* GenreViewModel.swift */; };
 		29BC9FEE2C4FEBA50045B6B0 /* GenreServiceFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9FED2C4FEBA50045B6B0 /* GenreServiceFetcher.swift */; };
+		29BC9FF02C5005CE0045B6B0 /* Genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 29BC9FEF2C5005CE0045B6B0 /* Genres.json */; };
+		29BC9FF52C504D050045B6B0 /* RequestManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9FF42C504D050045B6B0 /* RequestManagerMock.swift */; };
+		29BC9FF72C504DA00045B6B0 /* GenresRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC9FF62C504DA00045B6B0 /* GenresRequestMock.swift */; };
 		BC01C6922B85F9C800C8058F /* ProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC01C6912B85F9C800C8058F /* ProfileRequest.swift */; };
 		BC01C69B2B860B1700C8058F /* PodcastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC01C69A2B860B1700C8058F /* PodcastListViewModel.swift */; };
 		BC01C69D2B860B7C00C8058F /* PodcastListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC01C69C2B860B7C00C8058F /* PodcastListService.swift */; };
@@ -89,6 +92,9 @@
 		29BC9FE82C4FE3400045B6B0 /* GenreDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreDetailScreen.swift; sourceTree = "<group>"; };
 		29BC9FEA2C4FEAA50045B6B0 /* GenreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreViewModel.swift; sourceTree = "<group>"; };
 		29BC9FED2C4FEBA50045B6B0 /* GenreServiceFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreServiceFetcher.swift; sourceTree = "<group>"; };
+		29BC9FEF2C5005CE0045B6B0 /* Genres.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Genres.json; sourceTree = "<group>"; };
+		29BC9FF42C504D050045B6B0 /* RequestManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManagerMock.swift; sourceTree = "<group>"; };
+		29BC9FF62C504DA00045B6B0 /* GenresRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresRequestMock.swift; sourceTree = "<group>"; };
 		BC01C6912B85F9C800C8058F /* ProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRequest.swift; sourceTree = "<group>"; };
 		BC01C69A2B860B1700C8058F /* PodcastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListViewModel.swift; sourceTree = "<group>"; };
 		BC01C69C2B860B7C00C8058F /* PodcastListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastListService.swift; sourceTree = "<group>"; };
@@ -201,6 +207,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		29BC9FF12C504C880045B6B0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */,
+				29BC9FF42C504D050045B6B0 /* RequestManagerMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		BC01C6932B85FED300C8058F /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +276,7 @@
 			children = (
 				BCCB40362B7FDFF1001899B8 /* Notifications.json */,
 				BCCB40372B7FDFF1001899B8 /* Podcasts.json */,
+				29BC9FEF2C5005CE0045B6B0 /* Genres.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,7 +343,9 @@
 		BC71C9C42B84A82900BBD576 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				29BC9FF12C504C880045B6B0 /* Network */,
 				BC71C9C52B84A82F00BBD576 /* Api */,
+				29BC9FF62C504DA00045B6B0 /* GenresRequestMock.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -337,7 +355,6 @@
 			children = (
 				BC71C9C72B84A84400BBD576 /* Helper */,
 				BC71C9C62B84A83E00BBD576 /* Mock */,
-				BC71C9D22B84B1D800BBD576 /* RequestManagerTests.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -614,6 +631,7 @@
 			files = (
 				BCCB40012B7FDB6F001899B8 /* Preview Assets.xcassets in Resources */,
 				BCCB3FFE2B7FDB6F001899B8 /* Assets.xcassets in Resources */,
+				29BC9FF02C5005CE0045B6B0 /* Genres.json in Resources */,
 				BCCB40392B7FDFF1001899B8 /* Podcasts.json in Resources */,
 				BCCB40382B7FDFF1001899B8 /* Notifications.json in Resources */,
 			);
@@ -690,7 +708,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */,
+				29BC9FF72C504DA00045B6B0 /* GenresRequestMock.swift in Sources */,
 				BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */,
+				29BC9FF52C504D050045B6B0 /* RequestManagerMock.swift in Sources */,
 				BC71C9C92B84A85500BBD576 /* APIManagerMock.swift in Sources */,
 				BCCB400B2B7FDB70001899B8 /* MyPodcastTests.swift in Sources */,
 				BC71C9DB2B8522D200BBD576 /* ExploreScreenTests.swift in Sources */,
