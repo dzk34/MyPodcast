@@ -21,7 +21,7 @@ struct PodcastListView: View {
             }
         }
         .task {
-            await viewModel.fetchPodcasts()
+            await viewModel.fetchPodcasts()//dzk
         }
         .listStyle(.plain)
     }

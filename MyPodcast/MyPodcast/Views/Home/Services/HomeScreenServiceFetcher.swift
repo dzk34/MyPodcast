@@ -1,18 +1,17 @@
 //
-//  ExploreScreenServiceFetcher.swift
+//  HomeScreenServiceFetcher.swift
 //  MyPodcast
 //
-//  Created by khaledus on 20/02/2024.
+//  Created by Khaled on 25/04/2024.
 //
 
 import Foundation
 
-protocol ExploreScreenFetcher {
-    func genres() async -> [Genre]
+protocol HomeScreenFetcher {
     func fetchPodcasts() async -> [Podcast]
 }
 
-struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
+struct HomeScreenServiceFetcher: HomeScreenFetcher {
     private let requestManager: RequestManagerProtocol
 
     init(requestManager: RequestManagerProtocol) {
@@ -20,22 +19,10 @@ struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
     }
 }
 
-extension ExploreScreenServiceFetcher {
-    func genres() async -> [Genre] {
-        let requestData = PodcastRequest.genres
-        
-        do {
-            let genresList: GenresList = try await requestManager.perform(requestData)
-            return genresList.genres
-        } catch {
-            print(error.localizedDescription)
-            return []
-        }
-    }
-    
+extension HomeScreenServiceFetcher {
     func fetchPodcasts() async -> [Podcast] {
         let requestData = PodcastRequest.bestPodcasts
-        
+
         do {
             let podcastList: PodcastList = try await requestManager.perform(requestData)
             return podcastList.podcasts

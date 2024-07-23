@@ -20,7 +20,7 @@ struct MainScreen: View {
 
     var body: some View {
         TabView {
-            HomeScreen()
+            HomeScreen(viewModel: viewModelFactory.makeHomeScreenViewModel())
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }

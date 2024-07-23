@@ -51,3 +51,18 @@ enum PodcastType: String, CaseIterable, Codable {
     case sport = "sport"
     case business = "business"
 }
+
+struct GenresList: Codable {
+    let genres: [Genre]
+}
+
+struct Genre: Hashable, Codable, Identifiable {
+    var id: String
+    var name: String
+    var parentId: String
+    
+    enum CodingKeys: String, CodingKey {
+        case parentId = "parent_id"
+        case id, name
+    }
+}

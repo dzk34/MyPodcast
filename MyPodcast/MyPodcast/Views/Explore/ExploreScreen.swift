@@ -21,20 +21,21 @@ struct ExploreScreen: View {
                     .cornerRadius(8)
                     .padding(.horizontal, 10)
                 
-                ForEach(viewModel.podcasts) { podcast in
+                ForEach(viewModel.genres) { genre in
                     Spacer()
                     NavigationLink {
-                        PodcastDetailsScreen(podcast: podcast)
+//                        PodcastDetailsScreen(podcast: podcast)
                     } label: {
                         Divider()
-                        ExploreItem(podcast: podcast)
+//                        ExploreItem(podcast: podcast)
+                        Text(genre.name)
                     }
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                 }
             }
             .task {
-                await viewModel.fetchPodcasts()
+                await viewModel.fetchPodcasts()//dzk
             }
             .listStyle(.plain)
             .navigationTitle("Explore")
