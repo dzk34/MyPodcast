@@ -22,21 +22,21 @@ struct ExploreScreen: View {
                     .padding(.horizontal, 10)
                 
                 ForEach(viewModel.genres) { genre in
-                    Spacer()
                     NavigationLink {
 //                        PodcastDetailsScreen(podcast: podcast)
+                        GenreDetailScreen(genre: genre)
                     } label: {
                         Divider()
-//                        ExploreItem(podcast: podcast)
-                        Text(genre.name)
+                        GenreView(genre: genre)
                     }
                     .listRowInsets(EdgeInsets())
                     .listRowSeparator(.hidden)
                 }
             }
             .task {
-                await viewModel.fetchPodcasts()//dzk
+                await viewModel.fetchGenres()
             }
+            .padding()
             .listStyle(.plain)
             .navigationTitle("Explore")
         }

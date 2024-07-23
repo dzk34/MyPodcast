@@ -11,8 +11,10 @@ enum PodcastRequest: RequestProtocol {
     case fecthPodcast(id: String)
     case fetchEpisode(id: String)
     case bestPodcasts
+    case curated_podcasts
     case searchPodcasts(term: String)
     case playlists
+    case podcastsByGenre(id: Int)
     case genres
 
     var path: String {
@@ -23,10 +25,14 @@ enum PodcastRequest: RequestProtocol {
             return "/api/v2/episodes/\(id)"
         case .bestPodcasts:
             return "/api/v2/best_podcasts"
+        case .curated_podcasts:
+            return "/api/v2/curated_podcasts"
         case .searchPodcasts(let term):
             return "/api/v2/search?q=\(term)"
         case .playlists:
             return "/api/v2/playlists"
+        case .podcastsByGenre(let id):
+            return "/api/v2/best_podcasts?genre_id=\(id)"
         case .genres:
             return "/api/v2/genres"
         }

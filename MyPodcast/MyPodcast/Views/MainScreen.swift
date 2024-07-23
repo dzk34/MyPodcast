@@ -38,11 +38,11 @@ struct MainScreen: View {
                 }
                 .tag(Tab.notifications)
 
-            ProfileScreen()
-                .tabItem {
-                    Label("My Profile", systemImage: "person.crop.circle")
-                }
-                .tag(Tab.mylist)
+//            ProfileScreen()
+//                .tabItem {
+//                    Label("My Profile", systemImage: "person.crop.circle")
+//                }
+//                .tag(Tab.mylist)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

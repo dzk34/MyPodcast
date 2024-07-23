@@ -21,14 +21,14 @@ final class ExploreScreenTests: XCTestCase {
     
     func testExploreScreenLoadingState() async {
         XCTAssertTrue(viewModel.isLoading, "The view model should be loading")
-        await viewModel.fetchPodcasts()
+        await viewModel.fetchGenres()
         XCTAssertFalse(viewModel.isLoading, "The view model shouldn't be loading")
     }
     
     func testExploreScreenFetcherEmptyResponse() async {
         viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: EmptyResponseExploreScreenFetcherMock())
         
-        await viewModel.fetchPodcasts()
+        await viewModel.fetchGenres()
         XCTAssertEqual(viewModel.podcasts.count, 0, "The viewModel's podcasts should be empty")
         XCTAssertFalse(viewModel.isLoading, "The viewModel shouldn't be loading when receiving empty response")
     }

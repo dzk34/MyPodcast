@@ -20,7 +20,6 @@ protocol RequestProtocol {
     var headers: [String: String] { get }
     var params: [String: Any] { get }
     var urlParams: [String: String?] { get }
-    var addAuthorizationToken: Bool { get }
     var requestType: RequestType { get }
 }
 
@@ -31,10 +30,6 @@ extension RequestProtocol {
 
     var scheme: String {
         APIConstants.scheme
-    }
-
-    var addAuthorizationToken: Bool {
-        false
     }
 
     var params: [String: Any] {
@@ -49,7 +44,7 @@ extension RequestProtocol {
         [:]
     }
     
-    func createURLRequest(authToken: String) throws -> URLRequest {
+    func createURLRequest() throws -> URLRequest {
         var components = URLComponents()
         components.scheme = scheme
         components.host = host
@@ -71,9 +66,7 @@ extension RequestProtocol {
             urlRequest.allHTTPHeaderFields = headers
         }
 
-        if addAuthorizationToken {
-            urlRequest.setValue(authToken, forHTTPHeaderField: "Authorization")
-        }
+        urlRequest.setValue(APIConstants.apiKey, forHTTPHeaderField: "X-ListenAPI-Key")
 
         urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
 

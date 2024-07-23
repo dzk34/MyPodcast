@@ -27,7 +27,7 @@ extension PodcastListServiceFetcher: PodcastListFetcher {
             let podcastList: PodcastList = try await requestManager.perform(requestData)
             return podcastList.podcasts
         } catch {
-            print(error.localizedDescription)
+            print(error)
             return []
         }
     }

@@ -19,7 +19,7 @@ final class ExploreScreenViewModel: ObservableObject {
     }
     
     @MainActor
-    func fetchPodcasts() async {
+    func fetchGenres() async {
         isLoading = true
         self.genres = await exploreScreenServiceFetcher.genres()//dzk
         isLoading = false

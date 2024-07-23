@@ -21,7 +21,7 @@ class RequestManager: RequestManagerProtocol, ObservableObject {
     }
 
     func perform<T: Decodable>(_ request: RequestProtocol) async throws -> T {
-        let data = try await apiManager.perform(request, authToken: "")
+        let data = try await apiManager.perform(request)
         
         let decoded: T = try parser.parse(data: data)
         return decoded

@@ -43,10 +43,10 @@ struct Podcast: Hashable, Codable, Identifiable {
     var image: String
     var thumbnail: String
     var rss: String
-    var type: PodcastType
+    var type: String
 }
 
-enum PodcastType: String, CaseIterable, Codable {
+enum PodcastType: String, CaseIterable, Codable {//dzk
     case episodic = "episodic"
     case sport = "sport"
     case business = "business"
@@ -57,9 +57,9 @@ struct GenresList: Codable {
 }
 
 struct Genre: Hashable, Codable, Identifiable {
-    var id: String
+    var id: Int
     var name: String
-    var parentId: String
+    var parentId: Int?
     
     enum CodingKeys: String, CodingKey {
         case parentId = "parent_id"

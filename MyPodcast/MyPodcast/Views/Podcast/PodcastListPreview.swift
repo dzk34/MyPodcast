@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PodcastListView: View {
+struct PodcastListPreview: View {
     @ObservedObject var viewModel: PodcastListViewModel
 
     var body: some View {

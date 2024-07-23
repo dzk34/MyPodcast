@@ -1,19 +1,19 @@
 //
-//  HomeScreen.swift
+//  GenreDetailScreen.swift
 //  MyPodcast
 //
-//  Created by khaledus on 16/02/2024.
+//  Created by khaledus on 23/07/2024.
 //
 
 import SwiftUI
 
-struct HomeScreen: View {
-    @ObservedObject var viewModel: HomeScreenViewModel
+struct GenreDetailScreen: View {
+    var genre: Genre
+    @ObservedObject var viewModel: GenreViewModel
 
     var body: some View {
         NavigationView {
             List {
-                Text("Best Podcasts")
                 ForEach(viewModel.podcasts) { podcast in
                     Spacer()
                     NavigationLink {
@@ -26,12 +26,12 @@ struct HomeScreen: View {
                     .listRowSeparator(.hidden)
                 }
             }
+            .task {
+                await viewModel.fetchPodcasts(id: genre.id)
+            }
+            .padding()
             .listStyle(.plain)
+            .navigationTitle("Explore")
         }
-        .task {
-            await viewModel.fetchPodcasts()//dzk
-        }
-
-        .padding(.top)
     }
 }

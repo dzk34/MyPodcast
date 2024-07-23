@@ -28,7 +28,7 @@ extension ExploreScreenServiceFetcher {
             let genresList: GenresList = try await requestManager.perform(requestData)
             return genresList.genres
         } catch {
-            print(error.localizedDescription)
+            print(error)
             return []
         }
     }
@@ -40,7 +40,7 @@ extension ExploreScreenServiceFetcher {
             let podcastList: PodcastList = try await requestManager.perform(requestData)
             return podcastList.podcasts
         } catch {
-            print(error.localizedDescription)
+            print(error)
             return []
         }
     }
