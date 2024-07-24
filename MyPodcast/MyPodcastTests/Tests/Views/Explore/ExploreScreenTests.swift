@@ -12,11 +12,11 @@ import XCTest
 
 
 final class ExploreScreenTests: XCTestCase {
-    var viewModel: ExploreScreenViewModel!
-    
+    @InjectedDependency(\.exploreScreenViewModelMock) var viewModel: ExploreScreenViewModelMock
+
     override func setUp() {
         super.setUp()
-      viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: ExploreScreenFetcherMock())
+      viewModel = ExploreScreenViewModelMock(exploreScreenServiceFetcher: ExploreScreenFetcherMock())
     }
     
     func testExploreScreenLoadingState() async {
@@ -26,10 +26,10 @@ final class ExploreScreenTests: XCTestCase {
     }
     
     func testExploreScreenFetcherEmptyResponse() async {
-        viewModel = ExploreScreenViewModel(exploreScreenServiceFetcher: EmptyResponseExploreScreenFetcherMock())
+        viewModel = ExploreScreenViewModelMock(exploreScreenServiceFetcher: EmptyResponseExploreScreenFetcherMock())
         
         await viewModel.fetchGenres()
-        XCTAssertEqual(viewModel.genres.count, 0, "The viewModel's podcasts should be empty")
+        XCTAssertEqual(viewModel.genres?.count, 0, "The viewModel's genres should be empty")
         XCTAssertFalse(viewModel.isLoading, "The viewModel shouldn't be loading when receiving empty response")
     }
 }

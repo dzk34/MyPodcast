@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		292751AD2C4FD49B0003E795 /* GenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292751AC2C4FD49B0003E795 /* GenreView.swift */; };
+		295068BE2C513DF1000CFB1D /* MockServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295068BD2C513DF1000CFB1D /* MockServiceContainer.swift */; };
+		295068C02C513EC7000CFB1D /* ExploreScreenViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295068BF2C513EC7000CFB1D /* ExploreScreenViewModelMock.swift */; };
 		299D764A2C50F17F004486DF /* ServiceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D76492C50F17F004486DF /* ServiceContainer.swift */; };
 		299D764C2C50F1CC004486DF /* ServiceInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299D764B2C50F1CC004486DF /* ServiceInjection.swift */; };
 		29BC70F42BDAA905006E262C /* NotificationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BC70F32BDAA905006E262C /* NotificationRequest.swift */; };
@@ -86,6 +88,8 @@
 
 /* Begin PBXFileReference section */
 		292751AC2C4FD49B0003E795 /* GenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreView.swift; sourceTree = "<group>"; };
+		295068BD2C513DF1000CFB1D /* MockServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceContainer.swift; sourceTree = "<group>"; };
+		295068BF2C513EC7000CFB1D /* ExploreScreenViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreScreenViewModelMock.swift; sourceTree = "<group>"; };
 		299D76492C50F17F004486DF /* ServiceContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceContainer.swift; sourceTree = "<group>"; };
 		299D764B2C50F1CC004486DF /* ServiceInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInjection.swift; sourceTree = "<group>"; };
 		29BC70F32BDAA905006E262C /* NotificationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRequest.swift; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 			children = (
 				BC71C9D92B8522BC00BBD576 /* Views */,
 				BC71C9C32B84A81D00BBD576 /* Core */,
+				295068BD2C513DF1000CFB1D /* MockServiceContainer.swift */,
+				295068BF2C513EC7000CFB1D /* ExploreScreenViewModelMock.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -721,8 +727,10 @@
 			files = (
 				BC71C9D12B84B0DC00BBD576 /* PodcastsRequestMock.swift in Sources */,
 				29BC9FF72C504DA00045B6B0 /* GenresRequestMock.swift in Sources */,
+				295068C02C513EC7000CFB1D /* ExploreScreenViewModelMock.swift in Sources */,
 				BC71C9D32B84B1D800BBD576 /* RequestManagerTests.swift in Sources */,
 				29BC9FF52C504D050045B6B0 /* RequestManagerMock.swift in Sources */,
+				295068BE2C513DF1000CFB1D /* MockServiceContainer.swift in Sources */,
 				BC71C9C92B84A85500BBD576 /* APIManagerMock.swift in Sources */,
 				BCCB400B2B7FDB70001899B8 /* MyPodcastTests.swift in Sources */,
 				BC71C9DB2B8522D200BBD576 /* ExploreScreenTests.swift in Sources */,
