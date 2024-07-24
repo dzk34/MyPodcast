@@ -7,17 +7,14 @@
 
 import Foundation
 
-
 final class PodcastListViewModel: ObservableObject {
-//    private let podcastListServiceFetcher: PodcastListServiceFetcher
     @InjectedDependency(\.podcastListServiceFetcher) var podcastListServiceFetcher: PodcastListFetcher
 
     @Published var isLoading: Bool
     @Published var podcasts: [Podcast] = []
 
-    init(isLoading: Bool = true/*, podcastListServiceFetcher: PodcastListServiceFetcher*/) {
+    init(isLoading: Bool = true) {
         self.isLoading = isLoading
-//        self.podcastListServiceFetcher = podcastListServiceFetcher
     }
 
     @MainActor
