@@ -9,7 +9,6 @@ import SwiftUI
 
 struct MainScreen: View {
     @State private var selection: Tab = .home
-    @EnvironmentObject var viewModelFactory: ViewModelFactory
     
     enum Tab {
         case home
@@ -20,13 +19,13 @@ struct MainScreen: View {
 
     var body: some View {
         TabView {
-            HomeScreen()
+            HomeScreen(viewModel: HomeScreenViewModel())
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
                 .tag(Tab.home)            
 
-            ExploreScreen()
+            ExploreScreen(viewModel: ExploreScreenViewModel())
                 .tabItem {
                     Label("Explore", systemImage: "signpost.right.and.left")
                 }
