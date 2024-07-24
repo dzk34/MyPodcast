@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GenreDetailScreen: View {
-    @InjectedDependency(\.genreViewModel) var viewModel: GenreViewModel
+    @ObservedObject var viewModel: GenreViewModel
     var genre: Genre
 
     var body: some View {

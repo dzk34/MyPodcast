@@ -10,13 +10,11 @@ import SwiftUI
 @main
 struct MyPodcastApp: App {
     @StateObject private var modelData = MockData()
-    let viewModelFactory = ViewModelFactory()
     
     var body: some Scene {
         WindowGroup {
             LandingScreen()
                 .environmentObject(modelData)
-                .environmentObject(viewModelFactory)
         }
     }
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @InjectedDependency(\.homeScreenViewModel) var viewModel: HomeScreenViewModel
-
+    @ObservedObject var viewModel: HomeScreenViewModel
+    
     var body: some View {
         NavigationStack {
             List {
