@@ -7,9 +7,7 @@
 
 import SwiftUI
 
-struct ProfileScreen: View {
-    @EnvironmentObject var viewModelFactory: ViewModelFactory
-    
+struct ProfileScreen: View {    
     var body: some View {
         VStack {
             VStack {
