@@ -20,13 +20,13 @@ struct MainScreen: View {
 
     var body: some View {
         TabView {
-            HomeScreen(viewModel: viewModelFactory.makeHomeScreenViewModel())
+            HomeScreen()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
                 .tag(Tab.home)            
 
-            ExploreScreen(viewModel: viewModelFactory.makeExploreScreenViewModel())
+            ExploreScreen()
                 .tabItem {
                     Label("Explore", systemImage: "signpost.right.and.left")
                 }
@@ -38,6 +38,7 @@ struct MainScreen: View {
                 }
                 .tag(Tab.notifications)
 
+            // ToDo: implement once Firebase is integrated with authentication...
 //            ProfileScreen()
 //                .tabItem {
 //                    Label("My Profile", systemImage: "person.crop.circle")

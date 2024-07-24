@@ -12,11 +12,7 @@ protocol HomeScreenFetcher {
 }
 
 struct HomeScreenServiceFetcher: HomeScreenFetcher {
-    private let requestManager: RequestManagerProtocol
-
-    init(requestManager: RequestManagerProtocol) {
-        self.requestManager = requestManager
-    }
+    @InjectedDependency(\.requestManager) var requestManager: RequestManagerProtocol
 }
 
 extension HomeScreenServiceFetcher {

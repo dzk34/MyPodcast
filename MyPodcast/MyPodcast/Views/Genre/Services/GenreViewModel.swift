@@ -8,12 +8,8 @@
 import Foundation
 
 final class GenreViewModel: ObservableObject {
-    private let genreServiceFetcher: GenreServiceFetcher
+    @InjectedDependency(\.genreServiceFetcher) var genreServiceFetcher: GenreServiceFetcher
     @Published var podcasts: [Podcast] = []
-
-    init(genreServiceFetcher: GenreServiceFetcher) {
-        self.genreServiceFetcher = genreServiceFetcher
-    }
     
     @MainActor
     func fetchPodcasts(id: Int) async {

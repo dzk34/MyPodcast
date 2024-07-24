@@ -8,12 +8,8 @@
 import Foundation
 
 final class HomeScreenViewModel: ObservableObject {
-    private let homeScreenServiceFetcher: HomeScreenServiceFetcher
+    @InjectedDependency(\.homeScreenServiceFetcher) var homeScreenServiceFetcher: HomeScreenFetcher
     @Published var podcasts: [Podcast] = []
-
-    init(homeScreenServiceFetcher: HomeScreenServiceFetcher) {
-        self.homeScreenServiceFetcher = homeScreenServiceFetcher
-    }
 }
 
 extension HomeScreenViewModel {

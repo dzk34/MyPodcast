@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct PodcastListPreview: View {
-    @ObservedObject var viewModel: PodcastListViewModel
+//    @ObservedObject var viewModel: PodcastListViewModel
+    @InjectedDependency(\.podcastListViewModel) var viewModel: PodcastListViewModel
 
     var body: some View {
         List {

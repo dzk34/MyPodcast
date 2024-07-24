@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ExploreScreen: View {
-    @ObservedObject var viewModel: ExploreScreenViewModel
-    @EnvironmentObject var viewModelFactory: ViewModelFactory
+    @InjectedDependency(\.exploreScreenViewModel) var viewModel: ExploreScreenViewModel
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.genres) { genre in
                     NavigationLink {
-                        GenreDetailScreen(genre: genre, viewModel: viewModelFactory.makeGenreViewModel())
+                        GenreDetailScreen(genre: genre)
                     } label: {
                         GenreView(genre: genre)
                     }

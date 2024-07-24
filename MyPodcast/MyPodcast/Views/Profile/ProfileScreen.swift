@@ -17,7 +17,7 @@ struct ProfileScreen: View {
                 ProfileText()
             }
             Spacer()
-            PodcastListPreview(viewModel: viewModelFactory.makePodcastListViewModel())
+            PodcastListPreview()
         }
     }
 }

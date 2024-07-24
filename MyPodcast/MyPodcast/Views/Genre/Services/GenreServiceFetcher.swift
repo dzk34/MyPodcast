@@ -12,11 +12,7 @@ protocol GenreServiceFetcher {
 }
 
 struct GenreScreenServiceFetcher: GenreServiceFetcher {
-    private let requestManager: RequestManagerProtocol
-
-    init(requestManager: RequestManagerProtocol) {
-        self.requestManager = requestManager
-    }
+    @InjectedDependency(\.requestManager) var requestManager: RequestManagerProtocol
 }
 
 extension GenreScreenServiceFetcher{

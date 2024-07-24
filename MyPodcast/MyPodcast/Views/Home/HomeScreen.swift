@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
-    @ObservedObject var viewModel: HomeScreenViewModel
+    @InjectedDependency(\.homeScreenViewModel) var viewModel: HomeScreenViewModel
 
     var body: some View {
         NavigationStack {
