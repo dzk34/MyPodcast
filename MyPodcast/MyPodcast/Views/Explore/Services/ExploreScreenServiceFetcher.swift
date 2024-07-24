@@ -13,11 +13,7 @@ protocol ExploreScreenFetcher {
 }
 
 struct ExploreScreenServiceFetcher: ExploreScreenFetcher {
-    private let requestManager: RequestManagerProtocol
-
-    init(requestManager: RequestManagerProtocol) {
-        self.requestManager = requestManager
-    }
+    @InjectedDependency(\.requestManager) var requestManager: RequestManagerProtocol
 }
 
 extension ExploreScreenServiceFetcher {

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct GenreDetailScreen: View {
+    @InjectedDependency(\.genreViewModel) var viewModel: GenreViewModel
     var genre: Genre
-    @ObservedObject var viewModel: GenreViewModel
 
     var body: some View {
         NavigationStack {

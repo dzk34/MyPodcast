@@ -9,13 +9,13 @@ import Foundation
 
 
 final class ExploreScreenViewModel: ObservableObject {
-    private let exploreScreenServiceFetcher: ExploreScreenFetcher
+    @InjectedDependency(\.exploreScreenServiceFetcher) var exploreScreenServiceFetcher: ExploreScreenFetcher
+
     @Published var isLoading: Bool
     @Published var genres: [Genre] = []
 
-    init(isLoading: Bool = true, exploreScreenServiceFetcher: ExploreScreenFetcher) {
+    init(isLoading: Bool = true) {
         self.isLoading = isLoading
-        self.exploreScreenServiceFetcher = exploreScreenServiceFetcher
     }
     
     @MainActor
